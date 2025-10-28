@@ -1,9 +1,9 @@
 import AboutView from "./AboutView";
 
 export const metadata = {
-  title: "เกี่ยวกับเรา | About | ThaiPaipan Textile Printing",
+  title: "About Neosen | Intelligent Power Systems",
   description:
-    "รู้จักวิสัยทัศน์ ทีมงาน และคุณค่าที่ผลักดันให้ไทยพีพานเป็นผู้นำด้านการพิมพ์ผ้าคุณภาพสูง พร้อมอ่านสรุปภาษาอังกฤษในหน้าเดียวกัน",
+    "Discover Neosen's mission, engineering culture, and global capabilities powering intelligent charging and energy networks.",
 };
 
 export default function AboutPage() {

@@ -1,9 +1,9 @@
 import BlogView from "./BlogView";
 
 export const metadata = {
-  title: "บทความ | Articles | ThaiPaipan Textile Printing",
+  title: "Neosen Insights",
   description:
-    "รวมบทความสองภาษาเกี่ยวกับการพิมพ์ผ้า การบริหารโรงพิมพ์ และแนวทางยกระดับการผลิตจากทีมงาน ThaiPaipan",
+    "Explore Neosen perspectives on intelligent charging, energy storage, fleet electrification, and infrastructure design.",
 };
 
 export default function BlogPage() {

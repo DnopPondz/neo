@@ -14,12 +14,7 @@ export const menuItems = [
   { key: "contact", href: "/contact" },
 ];
 
-const defaultContactNumbers = [
-  "+66(0)2735-9109-10",
-  "+66(0)2182-3306",
-  "+66(0)2182-3301",
-  "Fax +66(0)2735-8941",
-];
+const defaultContactNumbers = ["+1 (415) 555-0182", "+1 (415) 555-0199"];
 
 function LanguageToggleButton({ language, onToggle }) {
   const isThai = language === "th";
@@ -65,16 +60,16 @@ export default function Navbar() {
   const languageLabel = language === "th" ? "เลือกภาษา" : "Language";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="hidden border-b border-slate-200 bg-slate-50/80 text-xs text-slate-500 md:block">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div className="hidden border-b border-slate-200 bg-slate-900/90 text-xs text-slate-200 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 lg:px-8">
-          <span className="font-medium text-slate-600">
+          <span className="font-medium text-slate-100">
             {translations.brand.slogan}
           </span>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             {contactNumbers.map((contact) => (
               <span key={contact} className="flex items-center gap-2">
-                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 {contact}
               </span>
             ))}
@@ -83,9 +78,9 @@ export default function Navbar() {
       </div>
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 lg:px-8">
         <div className="flex items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-3" aria-label="ThaiPaipan Textile Printing home">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-amber-500 bg-amber-50 text-lg font-bold text-amber-600 shadow-inner">
-              TP
+          <Link href="/" className="flex items-center gap-3" aria-label={`${translations.brand.name} home`}>
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-900 bg-slate-900 text-lg font-bold text-white shadow-inner">
+              N
             </div>
             <div className="flex flex-col text-left">
               <span className="text-xl font-semibold tracking-wide text-slate-900">
@@ -106,8 +101,8 @@ export default function Navbar() {
                   aria-current={isActive ? "page" : undefined}
                   className={`rounded-full px-4 py-2 transition-all ${
                     isActive
-                      ? "bg-amber-50 text-amber-600 shadow"
-                      : "hover:bg-slate-100 hover:text-amber-600"
+                      ? "bg-emerald-100 text-emerald-700 shadow"
+                      : "hover:bg-slate-100 hover:text-emerald-600"
                   }`}
                 >
                   {translations.nav[item.key]}
@@ -125,7 +120,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-amber-300 hover:text-amber-600 lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-emerald-400 hover:text-emerald-600 lg:hidden"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label="Toggle menu"
@@ -166,8 +161,8 @@ export default function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`rounded-xl px-3 py-2 transition-colors ${
                     isActive
-                      ? "bg-amber-50 text-amber-600 shadow"
-                      : "hover:bg-slate-100 hover:text-amber-600"
+                      ? "bg-emerald-100 text-emerald-700 shadow"
+                      : "hover:bg-slate-100 hover:text-emerald-600"
                   }`}
                 >
                   {translations.nav[item.key]}

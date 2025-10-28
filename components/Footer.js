@@ -11,13 +11,13 @@ export default function Footer() {
   const { brand, nav, footer } = translations;
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-100">
+    <footer className="border-t border-slate-200 bg-slate-950 text-slate-100">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-amber-400 bg-amber-100 text-lg font-bold text-amber-700 shadow-inner">
-                TP
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400 bg-emerald-500/20 text-lg font-bold text-emerald-300 shadow-inner">
+                N
               </div>
               <div>
                 <p className="text-xl font-semibold tracking-wide text-white">{brand.name}</p>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
               {footer.quickLinksTitle}
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
@@ -36,7 +36,7 @@ export default function Footer() {
                 <li key={item.key}>
                   <Link
                     href={item.href}
-                    className="inline-flex items-center rounded-full px-3 py-1 text-slate-300 transition hover:bg-white/10 hover:text-white"
+                    className="inline-flex items-center rounded-full px-3 py-1 text-slate-300 transition hover:bg-emerald-400/10 hover:text-emerald-200"
                   >
                     {nav[item.key]}
                   </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
                 {footer.contactTitle}
               </h3>
               <div className="mt-4 space-y-2 text-sm text-slate-300">
@@ -64,7 +64,7 @@ export default function Footer() {
                 <span className="font-semibold text-white">{footer.emailLabel}:</span>{" "}
                 <a
                   href={`mailto:${footer.email}`}
-                  className="text-amber-300 transition hover:text-amber-200"
+                  className="text-emerald-300 transition hover:text-emerald-200"
                 >
                   {footer.email}
                 </a>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
                 {footer.hoursTitle}
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
@@ -84,7 +84,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-emerald-300">
                 {footer.socialsTitle}
               </h3>
               <ul className="mt-4 space-y-2 text-sm">
@@ -92,11 +92,11 @@ export default function Footer() {
                   <li key={social.href}>
                     <Link
                       href={social.href}
-                      className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-slate-300 transition hover:bg-white/10 hover:text-white"
+                      className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-slate-300 transition hover:bg-emerald-400/10 hover:text-emerald-200"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-400" aria-hidden />
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden />
                       {social.label}
                     </Link>
                   </li>

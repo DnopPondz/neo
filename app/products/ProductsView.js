@@ -1,251 +1,248 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
-const productBackgrounds = {
-  "eco-digital": "/products/eco-digital.svg",
-  "decor-flex": "/products/decor-flex.svg",
-  "industrial-guard": "/products/industrial-guard.svg",
-  "merch-lab": "/products/merch-lab.svg",
-};
-
 const pageCopy = {
   th: {
-    heroHeading: "โซลูชันที่ออกแบบรอบธุรกิจของคุณ",
+    heroHeading: "แพ็กเกจโซลูชันพลังงาน",
     detailCta: "ดูรายละเอียด",
     modal: {
-      closeAria: "ปิดหน้าต่างรายละเอียดสินค้า",
-      highlightsTitle: "จุดเด่นหลัก",
-      applicationsTitle: "เหมาะกับงานใดบ้าง",
+      closeAria: "ปิดหน้าต่างรายละเอียดโซลูชัน",
+      highlightsTitle: "สิ่งที่โดดเด่น",
+      applicationsTitle: "เหมาะสำหรับ",
     },
     catalog: [
       {
-        id: "eco-digital",
-        name: "Eco Digital Textile",
-        target: "งานแฟชั่นความละเอียดสูง",
+        id: "fastcharge-core",
+        name: "FastCharge Core",
+        target: "เครือข่ายชาร์จ DC ความเร็วสูง",
+        gradient: "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(15,23,42,0.9))",
         summary:
-          "ผ้าพิมพ์ดิจิทัลใช้หมึกน้ำที่ให้สีสดคม เนื้อสัมผัสนุ่ม พร้อมรองรับล็อตขนาดเล็ก-กลาง",
+          "สถานีชาร์จแบบโมดูลาร์รองรับกำลัง 75-350kW ปรับโหลดอัตโนมัติและดูแลง่าย",
         details: {
           description:
-            "ไลน์ผลิตที่ตอบโจทย์แบรนด์แฟชั่นยุคใหม่ ให้คุณทดลองคอลเลกชันได้รวดเร็วและควบคุมคุณภาพทุกสีสันได้ง่าย",
+            "เหมาะสำหรับผู้ให้บริการสถานีชาร์จและผู้ค้าปลีกที่ต้องการขยายเครือข่ายอย่างรวดเร็วพร้อมความพร้อมใช้งานสูง",
           highlights: [
-            "พิมพ์ได้ทั้งเส้นใยธรรมชาติและสังเคราะห์",
-            "เครื่องพิมพ์ความละเอียด 1200 DPI พร้อมระบบปรับโปรไฟล์สี",
-            "ผ่านการรับรองมาตรฐาน OEKO-TEX® สำหรับเสื้อผ้า",
+            "รองรับมาตรฐาน CCS, CHAdeMO, GB/T",
+            "โมดูลกำลังสลับได้ ลดเวลาหยุดซ่อม",
+            "ติดตามสถานะผ่านแดชบอร์ดแบบเรียลไทม์",
           ],
           applications: [
-            "เสื้อผ้าแฟชั่น",
-            "ผ้าพันคอและแอ็กเซสซอรี",
-            "แคปซูลคอลเลกชันตามฤดูกาล",
+            "เครือข่ายชาร์จสาธารณะ",
+            "สถานีบริการน้ำมัน",
+            "ศูนย์การค้า",
           ],
         },
       },
       {
-        id: "decor-flex",
-        name: "Decor Flex Print",
-        target: "ของตกแต่งบ้าน",
+        id: "gridflex-storage",
+        name: "GridFlex Storage",
+        target: "ระบบกักเก็บพลังงานเมกะวัตต์",
+        gradient: "linear-gradient(135deg, rgba(56,189,248,0.25), rgba(15,23,42,0.9))",
         summary:
-          "ระบบพิมพ์โรตารี่และดิจิทัลผสมผสาน พร้อมเคลือบกัน UV และทนการซักเหมาะกับงานตกแต่ง",
+          "แพลตฟอร์มแบตเตอรี่พร้อมระบบ BMS และซอฟต์แวร์ AI สำหรับ peak shaving และการซื้อขายพลังงาน",
         details: {
           description:
-            "บริการครบวงจรตั้งแต่การไล่เฉดสีให้เข้ากับ moodboard ไปจนถึงการเคลือบผิวและตัดเย็บเพื่อส่งออก",
+            "ตอบโจทย์โรงงานและผู้ดูแลโครงสร้างพื้นฐานที่ต้องการควบคุมค่าไฟและสร้างความยืดหยุ่นให้โครงข่าย",
           highlights: [
-            "ผ้า base หลากหลายทั้งโพลีเอสเตอร์ คอตตอน และผ้าผสม",
-            "ฟินิชชิ่งให้เลือกทั้งกันฝุ่น กันน้ำ และกันรังสี UV",
-            "ทีม QC ตรวจสอบทุกม้วนก่อนส่ง",
+            "โมดูล 1MW ขยายได้ตามการใช้งาน",
+            "ระบบป้องกันหลายชั้นและการตรวจสอบ 24/7",
+            "เชื่อมต่อพลังงานหมุนเวียนได้อย่างไร้รอยต่อ",
           ],
           applications: [
-            "ผ้าม่านและผ้าบุเฟอร์นิเจอร์",
-            "ผ้าปูโต๊ะและชุดเครื่องนอน",
-            "ของขวัญพรีเมียมตกแต่งบ้าน",
+            "โรงงานอุตสาหกรรม",
+            "ศูนย์ข้อมูล",
+            "สนามบิน/ท่าเรือ",
           ],
         },
       },
       {
-        id: "industrial-guard",
-        name: "Industrial Guard",
-        target: "งานอุตสาหกรรม",
+        id: "fleet-orchestrator",
+        name: "Fleet Orchestrator",
+        target: "ฟลีตยานยนต์ไฟฟ้า",
+        gradient: "linear-gradient(135deg, rgba(129,140,248,0.25), rgba(15,23,42,0.9))",
         summary:
-          "โซลูชันสำหรับงานสมรรถนะสูง เช่น ผ้าเทคนิคอล และงานพิมพ์ที่ต้องทนสารเคมีหรืออุณหภูมิ",
+          "ซอฟต์แวร์รวมสถานะรถ สถานี และการวางแผนเส้นทางพร้อมการคาดการณ์พลังงาน",
         details: {
           description:
-            "พัฒนาและผสมสูตรหมึกพิเศษให้เข้ากับการใช้งานเฉพาะอุตสาหกรรม พร้อมบริการทดสอบมาตรฐาน",
+            "ช่วยผู้ให้บริการขนส่งและโลจิสติกส์บริหารรอบวิ่งและตารางการชาร์จเพื่อเพิ่มเวลาวิ่งและลดต้นทุน",
           highlights: [
-            "รองรับมาตรฐาน ISO และ ASTM ที่ลูกค้าต้องการ",
-            "ทีมวิศวกรควบคุมขั้นตอนการผลิตและบันทึก QC",
-            "บริการรายงานลอตและการติดตามสินค้าแบบเรียลไทม์",
+            "วิเคราะห์ข้อมูลแบบเรียลไทม์",
+            "ตั้งกฎการชาร์จตามลำดับความสำคัญ",
+            "ระบบแจ้งเตือนและคำสั่งระยะไกล",
           ],
           applications: [
-            "ผ้าในอุตสาหกรรมยานยนต์",
-            "อุปกรณ์เซฟตี้และ PPE",
-            "วัสดุป้องกันความร้อน",
+            "ขนส่งสาธารณะ",
+            "คลังสินค้า",
+            "รถบริการและเดลิเวอรี",
           ],
         },
       },
       {
-        id: "merch-lab",
-        name: "Merch Lab",
-        target: "ของที่ระลึกและเมอร์ช",
+        id: "site-intelligence",
+        name: "Site Intelligence",
+        target: "การวิเคราะห์และออกแบบไซต์",
+        gradient: "linear-gradient(135deg, rgba(236,72,153,0.25), rgba(15,23,42,0.9))",
         summary:
-          "ผลิตเมอร์ชพรีเมียมครบวงจร ตั้งแต่งานออกแบบ mockup จนถึงแพ็กกิ้งพร้อมส่ง",
+          "บริการสำรวจสถานที่ด้วยดาต้าและจำลองโหลดพลังงานก่อนติดตั้งจริง",
         details: {
           description:
-            "แยกไลน์ผลิตเฉพาะสำหรับแบรนด์ที่ต้องการสร้างประสบการณ์ของขวัญและเมอร์ชคุณภาพสูง",
+            "ทำงานร่วมกับทีมวิศวกร Neosen เพื่อประเมินความพร้อมของพื้นที่และออกแบบระบบให้เหมาะสมที่สุด",
           highlights: [
-            "บริการออกแบบกราฟิกและขึ้นตัวอย่างด่วนภายใน 48 ชั่วโมง",
-            "เลือกวัสดุได้ทั้งผ้าไมโครไฟเบอร์และผ้ารีไซเคิล",
-            "ระบบแพ็กกิ้งตามธีมพร้อมจัดส่งหลายที่อยู่",
+            "สำรวจด้วยดาต้าจาก LIDAR และ IoT",
+            "จำลองโหลดและ ROI ล่วงหน้า",
+            "รายงานครบชุดสำหรับการอนุมัติโครงการ",
           ],
           applications: [
-            "ของที่ระลึกองค์กร",
-            "ชุดโปรโมชันเปิดตัวสินค้า",
-            "ของสะสมจำนวนจำกัด",
+            "โครงการเมืองอัจฉริยะ",
+            "คอมเพล็กซ์เชิงพาณิชย์",
+            "ฟลีทองค์กร",
           ],
         },
       },
     ],
     serviceIntro: {
-      title: "บริการเสริมยอดนิยม",
+      title: "บริการเสริมเพื่อความสำเร็จ",
       description:
-        "ปรับแต่งแพ็กเกจให้ตรงกับการดำเนินงานของคุณ ตั้งแต่การสนับสนุนด้านดีไซน์จนถึงการจัดการซัพพลายเชนหลังการผลิต",
+        "แพ็กเกจทุกตัวสามารถเพิ่มบริการระดับพรีเมียมเพื่อให้การดำเนินงานราบรื่นตั้งแต่เริ่มโครงการจนถึงหลังติดตั้ง",
     },
     serviceAddOns: [
       {
-        title: "Design Support",
-        description: "ที่ปรึกษาด้านการจัดเตรียมไฟล์ ทดลองลาย และ mockup 3D สำหรับการพรีเซนต์",
+        title: "Project Delivery",
+        description: "จัดการงานก่อสร้างและการติดตั้งพร้อมทีม PM ที่ประสานงานกับหน่วยงานท้องถิ่น",
       },
       {
-        title: "Logistics",
-        description: "จัดการจัดส่งทั้งในประเทศและต่างประเทศ พร้อมติดตามสถานะครบทุกขั้นตอน",
+        title: "Managed Operations",
+        description: "ศูนย์ปฏิบัติการ 24/7 เฝ้าระวังและรายงาน KPI รายสัปดาห์",
       },
       {
-        title: "Inventory Management",
-        description: "บริการจัดเก็บผ้าสำเร็จรูปและวัตถุดิบ พร้อมรายงานสต็อกแบบเรียลไทม์",
+        title: "Training & Enablement",
+        description: "คอร์สอบรมสำหรับวิศวกรและทีมบริการลูกค้าในสถานที่",
       },
     ],
-    contactCta: "เริ่มต้นคุยรายละเอียดโปรเจกต์",
-    insightsCta: "อ่านอินไซต์จากทีมผู้เชี่ยวชาญ",
+    contactCta: "เริ่มต้นวางแผนโครงการ",
+    insightsCta: "อ่านบทความล่าสุด",
   },
   en: {
-    heroHeading: "Solutions tailored around your business",
+    heroHeading: "Energy solution packages",
     detailCta: "View details",
     modal: {
-      closeAria: "Close product detail window",
-      highlightsTitle: "Key highlights",
-      applicationsTitle: "Ideal applications",
+      closeAria: "Close solution detail window",
+      highlightsTitle: "What stands out",
+      applicationsTitle: "Best suited for",
     },
     catalog: [
       {
-        id: "eco-digital",
-        name: "Eco Digital Textile",
-        target: "High-detail fashion runs",
+        id: "fastcharge-core",
+        name: "FastCharge Core",
+        target: "High-power DC charging networks",
+        gradient: "linear-gradient(135deg, rgba(16,185,129,0.25), rgba(15,23,42,0.9))",
         summary:
-          "Water-based digital prints with vibrant colour, soft handfeel, and flexibility for small-to-mid batches.",
+          "Modular charging cabinets delivering 75-350kW with dynamic load control and rapid serviceability.",
         details: {
           description:
-            "Purpose-built for modern fashion labels so you can trial collections quickly while keeping every shade on target.",
+            "Designed for charge-point operators and retailers scaling public charging with uncompromised uptime.",
           highlights: [
-            "Compatible with natural and synthetic fibres",
-            "1200 DPI printers with intelligent colour profiling",
-            "OEKO-TEX® certified outputs for apparel",
+            "Supports CCS, CHAdeMO, and GB/T",
+            "Hot-swappable power modules minimise downtime",
+            "Real-time health monitoring via Neosen dashboards",
           ],
           applications: [
-            "Fashion garments",
-            "Scarves and accessories",
-            "Seasonal capsule collections",
+            "Public charging networks",
+            "Fuel & convenience hubs",
+            "Retail destinations",
           ],
         },
       },
       {
-        id: "decor-flex",
-        name: "Decor Flex Print",
-        target: "Home décor brands",
+        id: "gridflex-storage",
+        name: "GridFlex Storage",
+        target: "Megawatt-scale energy storage",
+        gradient: "linear-gradient(135deg, rgba(56,189,248,0.25), rgba(15,23,42,0.9))",
         summary:
-          "Hybrid rotary and digital lines with UV and wash-resistant finishes made for interior textiles.",
+          "Battery systems with advanced BMS and AI-driven optimisation for peak shaving and energy trading.",
         details: {
           description:
-            "An end-to-end service from colour matching moodboards to surface coating and export-ready sewing.",
+            "Ideal for industrial facilities and infrastructure operators seeking resilience and cost optimisation.",
           highlights: [
-            "Broad fabric bases across polyester, cotton, and blends",
-            "Finishing options spanning dust, water, and UV protection",
-            "Dedicated QC inspection before every shipment",
+            "Scalable 1MW blocks configured to your load",
+            "Multi-layer safety and 24/7 monitoring",
+            "Seamless integration with on-site renewables",
           ],
           applications: [
-            "Curtains and upholstery",
-            "Table linens and bedding",
-            "Premium home gift sets",
+            "Industrial plants",
+            "Data centres",
+            "Airports & ports",
           ],
         },
       },
       {
-        id: "industrial-guard",
-        name: "Industrial Guard",
-        target: "Technical and industrial",
+        id: "fleet-orchestrator",
+        name: "Fleet Orchestrator",
+        target: "Electric fleet operations",
+        gradient: "linear-gradient(135deg, rgba(129,140,248,0.25), rgba(15,23,42,0.9))",
         summary:
-          "High-performance solutions for technical textiles exposed to chemicals, heat, or heavy wear.",
+          "Unified software for vehicles, chargers, route planning, and predictive energy scheduling.",
         details: {
           description:
-            "Custom ink chemistries and compliance testing tailored to each industry application.",
+            "Empowers transit and logistics providers to maximise vehicle availability and reduce operating costs.",
           highlights: [
-            "Meets ISO and ASTM standards requested by clients",
-            "Engineers oversee production steps with detailed QC logs",
-            "Real-time lot reporting and product traceability",
+            "Live analytics across every asset",
+            "Policy-driven charging prioritisation",
+            "Remote command and alerting workflows",
           ],
           applications: [
-            "Automotive interiors",
-            "Safety gear and PPE",
-            "Heat shielding materials",
+            "Public transit",
+            "Warehousing & logistics",
+            "Service & delivery fleets",
           ],
         },
       },
       {
-        id: "merch-lab",
-        name: "Merch Lab",
-        target: "Merchandise and gifting",
+        id: "site-intelligence",
+        name: "Site Intelligence",
+        target: "Site analysis & design",
+        gradient: "linear-gradient(135deg, rgba(236,72,153,0.25), rgba(15,23,42,0.9))",
         summary:
-          "Premium merch production from concept mockups to packed-and-ready fulfilment.",
+          "Data-led site surveys with energy load simulations before ground is broken.",
         details: {
           description:
-            "A dedicated line for brands delivering memorable gifting and limited-edition merchandise experiences.",
+            "Partner with Neosen engineers to evaluate readiness, plan grid upgrades, and secure stakeholder approval.",
           highlights: [
-            "Graphic design support with 48-hour sample turnaround",
-            "Material options across microfibre and recycled fabrics",
-            "Themed packing workflows with multi-destination delivery",
+            "LIDAR and IoT-assisted site assessments",
+            "Scenario modelling for load and ROI",
+            "Comprehensive reports for permits and financing",
           ],
           applications: [
-            "Corporate gifting",
-            "Product launch bundles",
-            "Limited-run collectibles",
+            "Smart-city programmes",
+            "Commercial complexes",
+            "Enterprise fleet campuses",
           ],
         },
       },
     ],
     serviceIntro: {
-      title: "Popular add-on services",
+      title: "Add-on services for success",
       description:
-        "Shape the right package for your operations—from creative support through to post-production supply chain care.",
+        "Extend every package with premium services that keep your deployment on schedule and performing from day one.",
     },
     serviceAddOns: [
       {
-        title: "Design support",
-        description:
-          "Consultants ready to prepare print files, run pattern trials, and craft 3D mockups for presentations.",
+        title: "Project delivery",
+        description: "Construction and installation managed by dedicated PM teams aligned with local authorities.",
       },
       {
-        title: "Logistics",
-        description:
-          "Domestic and international fulfilment with status tracking at every milestone.",
+        title: "Managed operations",
+        description: "24/7 operations centre providing monitoring, alerts, and weekly KPI reviews.",
       },
       {
-        title: "Inventory management",
-        description:
-          "Warehousing for finished goods and raw fabric with real-time stock reporting.",
+        title: "Training & enablement",
+        description: "On-site courses for engineering and customer teams tailored to your workflows.",
       },
     ],
-    contactCta: "Start a project conversation",
-    insightsCta: "Read insights from our experts",
+    contactCta: "Start planning your project",
+    insightsCta: "Read the latest insights",
   },
 };
 
@@ -278,35 +275,35 @@ function ProductModal({ product, onClose, labels }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="product-title"
-        className="relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/40 bg-white/95 shadow-2xl"
+        className="relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/20 bg-slate-900/95 text-slate-100 shadow-2xl"
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-700"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/10 text-slate-200 transition hover:bg-white/20"
           aria-label={labels.closeAria}
         >
           ×
         </button>
         <div className="grid gap-8 p-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300">
               {product.target}
             </p>
-            <h3 id="product-title" className="text-3xl font-semibold text-slate-900">
+            <h3 id="product-title" className="text-3xl font-semibold text-white">
               {product.name}
             </h3>
-            <p className="text-base text-slate-600">{product.details.description}</p>
+            <p className="text-base text-slate-200">{product.details.description}</p>
           </div>
           <div className="space-y-6">
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-100/80">
                 {labels.highlightsTitle}
               </h4>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+              <ul className="mt-3 space-y-2 text-sm text-slate-200">
                 {product.details.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 text-[10px] font-bold text-amber-600">
+                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-[10px] font-bold text-emerald-200">
                       ✓
                     </span>
                     <span>{item}</span>
@@ -315,14 +312,14 @@ function ProductModal({ product, onClose, labels }) {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-100/80">
                 {labels.applicationsTitle}
               </h4>
-              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-amber-600">
+              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-emerald-200">
                 {product.details.applications.map((useCase) => (
                   <li
                     key={useCase}
-                    className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1"
+                    className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1"
                   >
                     {useCase}
                   </li>
@@ -338,7 +335,7 @@ function ProductModal({ product, onClose, labels }) {
 
 export default function ProductsView() {
   const { language, translations } = useLanguage();
-  const { sections, hero } = translations;
+  const { sections } = translations;
   const copy = pageCopy[language];
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -347,16 +344,16 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-white via-slate-50 to-amber-50/40">
+    <div className="bg-slate-950">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-5 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+        <header className="space-y-5 text-center text-slate-100">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
             {sections.products.title}
           </p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             {copy.heroHeading}
           </h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-200">
             {sections.products.description}
           </p>
         </header>
@@ -365,26 +362,24 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-white/20 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-white/10 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-emerald-500/30"
               style={{
-                backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundImage: product.gradient,
               }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200">
                   {product.target}
                 </p>
                 <h2 className="text-2xl font-semibold text-white">{product.name}</h2>
                 <p className="text-sm leading-6 text-slate-100/90">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-amber-200">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-emerald-200">{copy.detailCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-amber-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-emerald-300"
                 >
                   {copy.detailCta}
                   <span aria-hidden>→</span>
@@ -394,48 +389,48 @@ export default function ProductsView() {
           ))}
         </section>
 
-        <section className="grid gap-8 rounded-[3rem] border border-amber-100 bg-amber-50/70 p-12 shadow-inner lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-amber-900">{copy.serviceIntro.title}</h2>
-            <p className="text-base text-amber-900/80">{copy.serviceIntro.description}</p>
+        <section className="grid gap-8 rounded-[3rem] border border-emerald-300/30 bg-emerald-400/10 p-12 shadow-inner lg:grid-cols-[1fr_1.2fr]">
+          <div className="space-y-4 text-slate-100">
+            <h2 className="text-3xl font-semibold text-white">{copy.serviceIntro.title}</h2>
+            <p className="text-base text-slate-200">{copy.serviceIntro.description}</p>
+            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-emerald-200">
+              <span>Neosen Services</span>
+              <span>24/7 Operations</span>
+              <span>Global Delivery</span>
+            </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 text-slate-100 md:grid-cols-3">
             {copy.serviceAddOns.map((service) => (
-              <div key={service.title} className="rounded-3xl border border-white/60 bg-white/90 p-6 text-sm text-slate-700">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">{service.title}</p>
-                <p className="mt-2">{service.description}</p>
+              <div
+                key={service.title}
+                className="flex h-full flex-col gap-3 rounded-3xl border border-white/20 bg-slate-900/60 p-6"
+              >
+                <h3 className="text-lg font-semibold text-white">{service.title}</h3>
+                <p className="text-sm leading-6 text-slate-200">{service.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="rounded-[3rem] border border-slate-200 bg-white/90 p-12 shadow-xl">
-          <div className="grid gap-6 md:grid-cols-2">
-            {sections.products.categories.map((category) => (
-              <div key={category.title} className="space-y-3 rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
-                <h3 className="text-xl font-semibold text-slate-900">{category.title}</h3>
-                <p className="text-sm text-slate-600">{category.detail}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
+        <div className="flex flex-col items-center justify-center gap-4 rounded-[3rem] border border-white/10 bg-slate-900/70 p-10 text-center text-slate-100">
+          <p className="text-xl font-semibold">{sections.products.ctaHeadline}</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+              className="rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-900 shadow hover:bg-emerald-300"
             >
               {copy.contactCta}
-              <span aria-hidden>→</span>
-            </Link>
-            <Link
+            </a>
+            <a
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-6 py-3 text-sm font-semibold text-amber-600 transition hover:border-amber-500 hover:text-amber-700"
+              className="rounded-full border border-emerald-300/60 px-6 py-3 text-sm font-semibold text-emerald-200 hover:border-emerald-200"
             >
               {copy.insightsCta}
-              <span aria-hidden>↗</span>
-            </Link>
+            </a>
           </div>
-        </section>
+        </div>
       </div>
+
       <ProductModal
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}
