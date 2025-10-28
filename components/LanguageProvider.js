@@ -176,9 +176,9 @@ const translations = {
         ],
       },
       contact: {
-        title: "ออกแบบระบบพลังงานไปพร้อมกับเรา",
+        title: "ช่องทางติดต่อ NEOSEN",
         description:
-          "กรอกข้อมูลหรือพูดคุยกับที่ปรึกษาเพื่อรับการวิเคราะห์ความพร้อมของไซต์และใบเสนอราคา",
+          "ส่งอีเมล โทรศัพท์ หรือกรอกแบบฟอร์มเพื่อให้ทีมงานติดต่อกลับเกี่ยวกับผลิตภัณฑ์และบริการของเรา",
         phoneLabel: "โทร",
         emailLabel: "อีเมล",
         addressLabel: "สำนักงานใหญ่",
@@ -386,9 +386,9 @@ const translations = {
         ],
       },
       contact: {
-        title: "Design your next energy project with us",
+        title: "Contact NEOSEN",
         description:
-          "Share your site requirements or talk to a specialist to receive a readiness assessment and proposal.",
+          "Email, call, or leave us a message and we'll share the right products and services for your needs.",
         phoneLabel: "Phone",
         emailLabel: "Email",
         addressLabel: "Headquarters",
