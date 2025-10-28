@@ -141,19 +141,18 @@ export default function Navbar() {
               aria-controls="mobile-menu"
             >
               <span className="sr-only">Toggle navigation</span>
-              <span className="flex flex-col items-center justify-center gap-1.5">
-                <span
-                  className={`h-0.5 w-6 rounded-full bg-current transition-transform ${
-                    isMenuOpen ? "translate-y-1.5 rotate-45" : ""
-                  }`}
-                />
-                <span className={`h-0.5 w-6 rounded-full bg-current transition-opacity ${isMenuOpen ? "opacity-0" : "opacity-100"}`} />
-                <span
-                  className={`h-0.5 w-6 rounded-full bg-current transition-transform ${
-                    isMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
-                  }`}
-                />
-              </span>
+              {isMenuOpen ? (
+                <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 shadow-inner shadow-black/20">
+                  <span className="absolute h-0.5 w-4 -rotate-45 rounded-full bg-current" />
+                  <span className="absolute h-0.5 w-4 rotate-45 rounded-full bg-current" />
+                </span>
+              ) : (
+                <span className="flex flex-col items-center justify-center gap-1.5">
+                  <span className="h-0.5 w-6 rounded-full bg-current transition-transform" />
+                  <span className="h-0.5 w-6 rounded-full bg-current transition-opacity" />
+                  <span className="h-0.5 w-6 rounded-full bg-current transition-transform" />
+                </span>
+              )}
             </button>
           </div>
 
