@@ -83,45 +83,45 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#1d2330] via-[#222a3a] to-[#2f3a4f] text-white shadow-lg">
-      <div className="mx-auto w-full max-w-6xl px-4 pb-4 pt-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-3 pt-3 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-3">
             <Link
               href="/"
               className="flex flex-1 items-center gap-4 sm:gap-6"
               aria-label={`${translations.brand.name} home`}
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/40 bg-white/10 text-lg font-bold tracking-[0.45em] text-white shadow-inner sm:h-16 sm:w-16 sm:text-2xl">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/40 bg-white/10 text-base font-bold tracking-[0.45em] text-white shadow-inner sm:h-14 sm:w-14 sm:text-xl">
                   N
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.45em] text-white/80 sm:text-[12px]">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.45em] text-white/80 sm:text-[11px]">
                     {translations.brand.name}
                   </span>
                   {legacyHeader.company ? (
-                    <span className="mt-1 text-[9px] uppercase tracking-[0.35em] text-white/60 sm:text-[10px]">
+                    <span className="mt-1 text-[8px] uppercase tracking-[0.35em] text-white/60 sm:text-[9px]">
                       {legacyHeader.company}
                     </span>
                   ) : null}
                 </div>
               </div>
               {strapline ? (
-                <div className="ml-auto hidden flex-col items-end text-[10px] leading-4 text-white/80 sm:flex">
+                <div className="ml-auto hidden flex-col items-end text-[9px] leading-4 text-white/80 sm:flex">
                   <p className="flex flex-wrap items-baseline gap-1 text-right font-medium text-white">
                     {highlightLetter && (
-                      <span className="text-base font-semibold text-amber-200 sm:text-lg">{highlightLetter}</span>
+                      <span className="text-[15px] font-semibold text-amber-200 sm:text-base">{highlightLetter}</span>
                     )}
                     <span>{straplineRest}</span>
                   </p>
                   {legacyHeader.emphasis ? (
-                    <p className="tracking-[0.4em] text-amber-200">{legacyHeader.emphasis}</p>
+                    <p className="tracking-[0.35em] text-amber-200">{legacyHeader.emphasis}</p>
                   ) : null}
                 </div>
               ) : null}
             </Link>
             {strapline ? (
-              <div className="basis-full text-center text-[10px] leading-4 text-white/80 sm:hidden">
+              <div className="basis-full text-center text-[9px] leading-4 text-white/80 sm:hidden">
                 <p className="flex justify-center gap-1 text-white">
                   {highlightLetter ? (
                     <span className="font-semibold text-amber-200">{highlightLetter}</span>
@@ -129,14 +129,14 @@ export default function Navbar() {
                   <span className="uppercase tracking-[0.35em]">{straplineRest}</span>
                 </p>
                 {legacyHeader.emphasis ? (
-                  <p className="mt-1 uppercase tracking-[0.4em] text-amber-200">{legacyHeader.emphasis}</p>
+                  <p className="mt-1 uppercase tracking-[0.35em] text-amber-200">{legacyHeader.emphasis}</p>
                 ) : null}
               </div>
             ) : null}
             <button
               type="button"
               onClick={() => setIsMenuOpen((value) => !value)}
-              className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 bg-white/5 text-white transition hover:border-white/40 hover:bg-white/10 sm:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-white/5 text-white transition hover:border-white/40 hover:bg-white/10 sm:hidden"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
             >
@@ -162,7 +162,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden items-center justify-between gap-4 sm:flex">
-            <div className="flex items-center gap-4 text-[11px] font-semibold tracking-[0.35em] text-white/60">
+            <div className="flex items-center gap-3 text-[10px] font-semibold tracking-[0.35em] text-white/60">
               {languages.map((item, index) => (
                 <div key={item.code} className="flex items-center">
                   <button
