@@ -24,6 +24,27 @@ const translations = {
       news: "ข้อมูล",
       contact: "ติดต่อ",
     },
+    home: {
+      banner: {
+        heading: "ABOUTUS",
+        description:
+          "นีโซเอนมุ่งมั่นพัฒนาเทคโนโลยีและบริการเพื่อยกระดับระบบไฟฟ้าอัจฉริยะสำหรับธุรกิจไทย",
+      },
+      paragraphs: [
+        "นีโซเอน เป็นบริษัทที่ผลิตและจัดจำหน่ายส่วนประกอบของอิเล็กทรอนิกส์ ที่ก่อตั้งขึ้นเมื่อมากกว่า 15 ปีที่ผ่านมา ทีมของเราและเครื่องมือที่ล้ำสมัยช่วยให้เราออกแบบและพัฒนาทุกรายละเอียดการประยุกต์ใช้งานเฉพาะผลิตภัณฑ์ ตั้งแต่ฟังก์ชันพื้นฐานไปจนถึงระบบควบคุมการบูรณาการอุตสาหกรรมที่สมบูรณ์แบบ เราเข้าใจในความต้องการของลูกค้าเป็นอย่างดี เนื่องจากเรามีประสบการณ์และความเป็นมืออาชีพที่สำคัญทั้งในด้านพัฒนาสินค้าร่วมกับลูกค้า และการบริการหลังการขาย",
+        "นีโซเอนมีความมุ่งมั่นที่จะพัฒนาโซลูชันที่สอดคล้องกับการใช้งานทางไฟฟ้าตามความต้องการ หากคุณต้องการทราบรายละเอียดเพิ่มเติม เรายินดีอย่างยิ่งที่จะให้คำปรึกษาที่เหมาะกับคุณ พร้อมรับฟังทุกความต้องการของคุณได้ที่ www.neosen.com หรือ info@neosen.com และหากต้องการปรึกษาเพิ่มเติม สามารถติดต่อเราได้ที่ 0-2831-5300-4",
+      ],
+      contact: {
+        invite:
+          "พร้อมสนทนาเพื่อออกแบบระบบอิเล็กทรอนิกส์ที่ตอบโจทย์ธุรกิจของคุณ",
+        websiteLabel: "เว็บไซต์",
+        website: "www.neosen.com",
+        emailLabel: "อีเมล",
+        email: "info@neosen.com",
+        phoneLabel: "โทรศัพท์",
+        phone: "0-2831-5300-4",
+      },
+    },
     hero: {
       eyebrow: "แพลตฟอร์มพลังงานอัจฉริยะ",
       headline: "ออกแบบระบบพลังงานเพื่อการเดินทางยุคถัดไป",
@@ -213,6 +234,26 @@ const translations = {
       products: "Solutions",
       news: "Insights",
       contact: "Contact",
+    },
+    home: {
+      banner: {
+        heading: "ABOUTUS",
+        description:
+          "Neosen is committed to advancing smart electrical systems for businesses across Thailand and beyond.",
+      },
+      paragraphs: [
+        "Neosen has manufactured and distributed electronic components for more than 15 years. Our experienced team and advanced tools let us design and refine every detail of tailored applications—from essential functions to fully integrated industrial control systems. We understand customer requirements through deep experience and professionalism across co-development and after-sales support.",
+        "We are dedicated to delivering electrical solutions that fit your operational needs. For more information, we are ready to advise on the right approach at www.neosen.com or info@neosen.com. If you would like to consult with our specialists directly, please call 0-2831-5300-4.",
+      ],
+      contact: {
+        invite: "Let's design the right electronic system for your business together.",
+        websiteLabel: "Website",
+        website: "www.neosen.com",
+        emailLabel: "Email",
+        email: "info@neosen.com",
+        phoneLabel: "Phone",
+        phone: "0-2831-5300-4",
+      },
     },
     hero: {
       eyebrow: "Intelligent power platform",
