@@ -490,19 +490,83 @@ function CatalogNode({ item, depth, activeId, onSelect }) {
   );
 }
 
+function ProductDetailContent({ product }) {
+  if (!product) {
+    return null;
+  }
+
+  return (
+    <>
+      <div className="space-y-4">
+        <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">
+          {product.title}
+        </span>
+        <p className="text-base leading-7 text-slate-600">{product.summary}</p>
+      </div>
+      <MediaPreview media={product.media} />
+      <ProductHighlights highlights={product.highlights} />
+    </>
+  );
+}
+
 export default function CapabilitiesView() {
   const { language } = useLanguage();
   const copy = catalogCopy[language];
   const [activeId, setActiveId] = useState(copy.catalog[0].id);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mobileDetailOpen, setMobileDetailOpen] = useState(false);
 
   useEffect(() => {
     setActiveId(catalogCopy[language].catalog[0].id);
+    setMobileDetailOpen(false);
   }, [language]);
 
   const flattened = useMemo(() => flattenCatalog(copy.catalog), [copy.catalog]);
   const activeProduct = useMemo(() => {
     return flattened.find((item) => item.id === activeId) ?? flattened[0];
   }, [flattened, activeId]);
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 1023px)");
+
+    const updateIsMobile = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    updateIsMobile(query);
+
+    if (typeof query.addEventListener === "function") {
+      query.addEventListener("change", updateIsMobile);
+    } else if (typeof query.addListener === "function") {
+      query.addListener(updateIsMobile);
+    }
+
+    return () => {
+      if (typeof query.removeEventListener === "function") {
+        query.removeEventListener("change", updateIsMobile);
+      } else if (typeof query.removeListener === "function") {
+        query.removeListener(updateIsMobile);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setMobileDetailOpen(false);
+    }
+  }, [isMobile]);
+
+  const handleSelectProduct = (productId) => {
+    setActiveId(productId);
+
+    if (isMobile) {
+      setMobileDetailOpen(true);
+    }
+  };
+
+  const closeMobileDetail = () => {
+    setMobileDetailOpen(false);
+  };
 
   return (
     <div className="bg-gradient-to-b from-slate-50 via-white to-slate-100">
@@ -514,28 +578,51 @@ export default function CapabilitiesView() {
           <p className="text-sm leading-6 text-slate-500">{copy.detailDescription}</p>
         </header>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start">
-          <section className="space-y-8 rounded-[2.5rem] border border-slate-200 bg-white/90 p-10 shadow-xl backdrop-blur">
-            <div className="space-y-4">
-              <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-600">
-                {activeProduct.title}
-              </span>
-              <p className="text-base leading-7 text-slate-600">{activeProduct.summary}</p>
-            </div>
-            <MediaPreview media={activeProduct.media} />
-            <ProductHighlights highlights={activeProduct.highlights} />
+        <div className="mt-16 grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-10 lg:items-start">
+          <section className="hidden space-y-8 rounded-[2.5rem] border border-slate-200 bg-white/90 p-10 shadow-xl backdrop-blur lg:flex lg:flex-col">
+            <ProductDetailContent product={activeProduct} />
           </section>
 
-          <aside className="rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-lg">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Product</h2>
+          <aside className="rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg backdrop-blur-sm sm:p-6">
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Product</h2>
+              <span className="text-xs font-medium text-slate-400 lg:hidden">Tap to explore</span>
+            </div>
             <div className="mt-4 space-y-1">
               {copy.catalog.map((item) => (
-                <CatalogNode key={item.id} item={item} depth={0} activeId={activeId} onSelect={setActiveId} />
+                <CatalogNode key={item.id} item={item} depth={0} activeId={activeId} onSelect={handleSelectProduct} />
               ))}
             </div>
           </aside>
         </div>
       </div>
+
+      {isMobile && mobileDetailOpen ? (
+        <div className="fixed inset-0 z-40 flex items-end justify-center bg-slate-900/60 px-4 py-6 sm:items-center">
+          <div
+            className="absolute inset-0"
+            role="presentation"
+            onClick={closeMobileDetail}
+            aria-hidden
+          />
+
+          <div className="relative z-10 w-full max-w-md overflow-hidden rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-2xl">
+            <div className="flex items-center justify-between gap-4">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{copy.detailTitle}</h3>
+              <button
+                type="button"
+                onClick={closeMobileDetail}
+                className="inline-flex items-center rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 transition hover:border-slate-300 hover:text-slate-700"
+              >
+                Close
+              </button>
+            </div>
+            <div className="mt-6 space-y-6">
+              <ProductDetailContent product={activeProduct} />
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
