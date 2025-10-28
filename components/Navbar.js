@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -14,27 +14,8 @@ export const menuItems = [
   { key: "contact", href: "/contact" },
 ];
 
-const defaultContactNumbers = ["+1 (415) 555-0182", "+1 (415) 555-0199"];
-
-function LanguageToggleButton({ language, onToggle }) {
-  const isThai = language === "th";
-  const nextLanguageLabel = isThai ? "English" : "Thai";
-
-  return (
-    <button
-      type="button"
-      onClick={onToggle}
-      className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-slate-600 shadow-sm transition-colors hover:border-amber-300 hover:text-amber-600"
-      aria-label={`Switch language to ${nextLanguageLabel}`}
-    >
-      {isThai ? "TH" : "EN"}
-    </button>
-  );
-}
-
 export default function Navbar() {
-  const { language, translations, toggleLanguage } = useLanguage();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, translations, setLanguage } = useLanguage();
   const pathname = usePathname();
 
   const activeKey = useMemo(() => {
@@ -50,143 +31,110 @@ export default function Navbar() {
     return matched?.key ?? menuItems[0].key;
   }, [pathname]);
 
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
+  const legacyHeader = translations.legacyHeader ?? {};
+  const strapline = legacyHeader.strapline ?? "";
+  const highlightLetter = strapline.charAt(0);
+  const straplineRest = strapline.slice(1);
 
-  const contactNumbers = (
-    translations.footer?.contactNumbers ?? defaultContactNumbers
-  ).slice(0, 2);
-  const languageLabel = language === "th" ? "เลือกภาษา" : "Language";
+  const handleLanguageSelect = (code) => {
+    if (language !== code) {
+      setLanguage(code);
+    }
+  };
+
+  const languages = [
+    { code: "th", label: "THAI" },
+    { code: "en", label: "ENG" },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur">
-      <div className="hidden border-b border-slate-200 bg-slate-900/90 text-xs text-slate-200 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 lg:px-8">
-          <span className="font-medium text-slate-100">
-            {translations.brand.slogan}
-          </span>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-            {contactNumbers.map((contact) => (
-              <span key={contact} className="flex items-center gap-2">
-                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                {contact}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 lg:px-8">
-        <div className="flex items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-3" aria-label={`${translations.brand.name} home`}>
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-900 bg-slate-900 text-lg font-bold text-white shadow-inner">
-              N
-            </div>
-            <div className="flex flex-col text-left">
-              <span className="text-xl font-semibold tracking-wide text-slate-900">
-                {translations.brand.name}
-              </span>
-              <span className="text-sm text-slate-500">
-                {translations.brand.tagline}
-              </span>
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-[#29313f] via-[#374155] to-[#4c5770] text-white shadow-lg">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-4 border-b border-white/15 pb-4 sm:flex-row sm:items-center sm:justify-between">
+          <Link
+            href="/"
+            className="flex items-center gap-4"
+            aria-label={`${translations.brand.name} home`}
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex flex-col items-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded border border-white/40 bg-white/10 text-2xl font-bold tracking-[0.4em] text-white shadow-inner">
+                  N
+                </div>
+                <span className="mt-2 text-[11px] font-semibold uppercase tracking-[0.6em] text-white/90">
+                  {translations.brand.name}
+                </span>
+              </div>
             </div>
           </Link>
-          <nav className="hidden items-center gap-1 text-sm font-medium text-slate-700 lg:flex">
-            {menuItems.map((item) => {
+          <div className="flex flex-col items-end text-right text-[11px] leading-4 text-white/80 sm:max-w-xl">
+            {strapline ? (
+              <p className="flex flex-wrap items-baseline justify-end gap-1 font-medium text-white">
+                {highlightLetter && (
+                  <span className="text-lg font-semibold text-amber-200">{highlightLetter}</span>
+                )}
+                <span>{straplineRest}</span>
+              </p>
+            ) : null}
+            {legacyHeader.emphasis ? (
+              <p className="mt-1 tracking-[0.35em] text-amber-200">
+                {legacyHeader.emphasis}
+              </p>
+            ) : null}
+            {legacyHeader.company ? (
+              <p className="tracking-[0.35em] text-white/90">{legacyHeader.company}</p>
+            ) : null}
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center justify-center gap-3 text-[11px] font-semibold tracking-[0.35em]">
+            {languages.map((item, index) => (
+              <div key={item.code} className="flex items-center">
+                <button
+                  type="button"
+                  onClick={() => handleLanguageSelect(item.code)}
+                  className={`transition-colors ${
+                    language === item.code
+                      ? "text-amber-200"
+                      : "text-white/60 hover:text-white"
+                  }`}
+                  aria-pressed={language === item.code}
+                >
+                  {item.label}
+                </button>
+                {index < languages.length - 1 ? (
+                  <span aria-hidden="true" className="mx-3 text-white/40">
+                    |
+                  </span>
+                ) : null}
+              </div>
+            ))}
+          </div>
+          <nav className="flex flex-wrap items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.35em]">
+            {menuItems.map((item, index) => {
               const isActive = activeKey === item.key;
               return (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`rounded-full px-4 py-2 transition-all ${
-                    isActive
-                      ? "bg-emerald-100 text-emerald-700 shadow"
-                      : "hover:bg-slate-100 hover:text-emerald-600"
-                  }`}
-                >
-                  {translations.nav[item.key]}
-                </Link>
+                <div key={item.key} className="flex items-center">
+                  <Link
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`px-3 py-1.5 transition-colors ${
+                      isActive
+                        ? "border border-white/40 bg-white/15 text-white shadow-inner"
+                        : "text-white/60 hover:text-white"
+                    }`}
+                  >
+                    {translations.nav[item.key]}
+                  </Link>
+                  {index < menuItems.length - 1 ? (
+                    <span aria-hidden="true" className="mx-3 text-white/30">
+                      |
+                    </span>
+                  ) : null}
+                </div>
               );
             })}
           </nav>
-          <div className="flex items-center gap-2">
-            <div className="hidden items-center lg:flex">
-              <LanguageToggleButton
-                language={language}
-                onToggle={toggleLanguage}
-              />
-            </div>
-            <button
-              type="button"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-emerald-400 hover:text-emerald-600 lg:hidden"
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label="Toggle menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                className="h-5 w-5"
-              >
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div className="lg:hidden">
-          <div
-            id="mobile-menu"
-            className={`grid origin-top gap-2 rounded-2xl border border-slate-200 bg-white/90 text-sm font-medium text-slate-700 shadow-lg transition-all ${
-              isMenuOpen
-                ? "mt-2 max-h-[80vh] scale-y-100 opacity-100 p-4"
-                : "mt-0 pointer-events-none max-h-0 scale-y-95 overflow-hidden p-0 opacity-0"
-            }`}
-            aria-hidden={!isMenuOpen}
-          >
-            {menuItems.map((item) => {
-              const isActive = activeKey === item.key;
-              return (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-xl px-3 py-2 transition-colors ${
-                    isActive
-                      ? "bg-emerald-100 text-emerald-700 shadow"
-                      : "hover:bg-slate-100 hover:text-emerald-600"
-                  }`}
-                >
-                  {translations.nav[item.key]}
-                </Link>
-              );
-            })}
-            <div className="mt-2 flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2">
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                {languageLabel}
-              </span>
-              <LanguageToggleButton
-                language={language}
-                onToggle={toggleLanguage}
-              />
-            </div>
-            <div className="flex flex-col gap-1 rounded-xl bg-slate-50 px-3 py-2 text-xs text-slate-500">
-              <span className="font-semibold uppercase tracking-wide text-slate-600">
-                {translations.footer?.contactTitle}
-              </span>
-              {contactNumbers.map((contact) => (
-                <span key={contact}>{contact}</span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </header>

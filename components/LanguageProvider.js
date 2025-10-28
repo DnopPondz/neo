@@ -11,6 +11,11 @@ const translations = {
       tagline: "โซลูชันพลังงานอัจฉริยะ",
       slogan: "ยกระดับระบบชาร์จและบริหารพลังงานสำหรับโลกการขนส่งไฟฟ้า",
     },
+    legacyHeader: {
+      strapline: "High information technologies for high success in your business.",
+      emphasis: "THINK OF US",
+      company: '"NEOSEN LIMITED"',
+    },
     nav: {
       home: "หน้าแรก",
       about: "แพลตฟอร์ม",
@@ -195,6 +200,11 @@ const translations = {
       name: "NEOSEN",
       tagline: "Intelligent Power Systems",
       slogan: "Powering mobility and infrastructure with adaptive charging technology.",
+    },
+    legacyHeader: {
+      strapline: "High information technologies for high success in your business.",
+      emphasis: "THINK OF US",
+      company: '"NEOSEN LIMITED"',
     },
     nav: {
       home: "Home",
