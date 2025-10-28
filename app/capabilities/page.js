@@ -1,9 +1,9 @@
 import CapabilitiesView from "./CapabilitiesView";
 
 export const metadata = {
-  title: "ศักยภาพการผลิต | Capabilities | ThaiPaipan Textile Printing",
+  title: "Neosen Platform Capabilities",
   description:
-    "สำรวจเทคโนโลยีการพิมพ์ผ้า เครื่องจักร และกระบวนการควบคุมคุณภาพ พร้อมคำอธิบายภาษาอังกฤษสำหรับทีมต่างประเทศ",
+    "Explore Neosen's edge hardware, energy management software, and lifecycle services powering intelligent infrastructure.",
 };
 
 export default function CapabilitiesPage() {

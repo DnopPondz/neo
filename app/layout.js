@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ThaiPaipan Textile Printing",
+  title: "Neosen Intelligent Power Systems",
   description:
-    "ThaiPaipan offers premium textile printing services for fashion, home décor, and industrial applications.",
+    "Neosen delivers intelligent charging, energy storage, and fleet management solutions for next-generation mobility and infrastructure.",
 };
 
 export default function RootLayout({ children }) {
