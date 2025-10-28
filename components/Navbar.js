@@ -7,10 +7,8 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 export const menuItems = [
   { key: "home", href: "/" },
-  { key: "about", href: "/about" },
   { key: "capabilities", href: "/capabilities" },
   { key: "products", href: "/products" },
-  { key: "news", href: "/blog" },
   { key: "contact", href: "/contact" },
 ];
 
@@ -20,9 +18,6 @@ export default function Navbar() {
 
   const activeKey = useMemo(() => {
     const matched = menuItems.find((item) => {
-      if (item.href === "/blog") {
-        return pathname.startsWith("/blog");
-      }
       if (item.href === "/") {
         return pathname === "/";
       }

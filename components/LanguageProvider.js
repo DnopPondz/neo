@@ -18,10 +18,8 @@ const translations = {
     },
     nav: {
       home: "หน้าแรก",
-      about: "แพลตฟอร์ม",
       capabilities: "เทคโนโลยี",
       products: "โซลูชัน",
-      news: "ข้อมูล",
       contact: "ติดต่อ",
     },
     home: {
@@ -229,10 +227,8 @@ const translations = {
     },
     nav: {
       home: "Home",
-      about: "Platform",
       capabilities: "Technology",
       products: "Solutions",
-      news: "Insights",
       contact: "Contact",
     },
     home: {
