@@ -183,35 +183,12 @@ const translations = {
       },
     },
     footer: {
-      tagline:
-        "Neosen ขับเคลื่อนโครงสร้างพื้นฐานพลังงานอัจฉริยะสำหรับโลกที่ไร้มลพิษ",
-      quickLinksTitle: "ลิงก์ด่วน",
-      contactTitle: "ติดต่อเรา",
-      addressLines: [
-        "NEOSEN Asia Pacific",
-        "อาคารคิวเฮาส์ ลุมพินี ชั้น 22",
-        "กรุงเทพมหานคร 10120",
-        "ประเทศไทย",
-      ],
-      contactNumbers: [
-        "โทร. +66 (0)2 123 4567",
-        "แฟกซ์ +66 (0)2 123 4568",
-      ],
-      emailLabel: "อีเมล",
-      email: "hello@neosen.com",
-      hoursTitle: "เวลาทำการ",
-      hours: [
-        "จันทร์-ศุกร์ 09:00-18:00 น.",
-        "ทีมซัพพอร์ตฉุกเฉิน 24 ชม.",
-      ],
-      socialsTitle: "ติดตาม Neosen",
-      socials: [
-        { label: "LinkedIn", href: "https://www.linkedin.com/company/neosen" },
-        { label: "YouTube", href: "https://www.youtube.com/@neosen" },
-        { label: "Twitter", href: "https://twitter.com/neosen" },
-      ],
-      legal: "© {year} Neosen Energy Systems. สงวนลิขสิทธิ์",
-      certifications: "มาตรฐาน IEC, UL และ ISO/IEC 27001",
+      linksLine: "เกี่ยวกับเรา | ผลิตภัณฑ์ | บริการทั่วไป | ติดต่อเรา",
+      addressLine:
+        "44/1 หมู่ 7 ถนนปู่เจ้าสมิงพราย อำเภอพระประแดง จังหวัดสมุทรปราการ",
+      contactLine:
+        "โทร. 02-755-8061-2 | แฟกซ์ 02-755-8063 | อีเมล info@neosen.com",
+      copyrightLine: "© copyright 2005 Neosen",
     },
   },
   en: {
@@ -391,35 +368,12 @@ const translations = {
       },
     },
     footer: {
-      tagline:
-        "Neosen powers intelligent energy infrastructure for a zero-emission future.",
-      quickLinksTitle: "Quick links",
-      contactTitle: "Get in touch",
-      addressLines: [
-        "NEOSEN Global HQ",
-        "88 Market Street, Suite 2400",
-        "San Francisco, CA 94105",
-        "USA",
-      ],
-      contactNumbers: [
-        "+1 (415) 555-0182",
-        "+1 (415) 555-0199",
-      ],
-      emailLabel: "Email",
-      email: "hello@neosen.com",
-      hoursTitle: "Office hours",
-      hours: [
-        "Monday – Friday 9:00-18:00",
-        "Emergency support available 24/7",
-      ],
-      socialsTitle: "Follow Neosen",
-      socials: [
-        { label: "LinkedIn", href: "https://www.linkedin.com/company/neosen" },
-        { label: "YouTube", href: "https://www.youtube.com/@neosen" },
-        { label: "Twitter", href: "https://twitter.com/neosen" },
-      ],
-      legal: "© {year} Neosen Energy Systems. All rights reserved.",
-      certifications: "IEC, UL, and ISO/IEC 27001 certified",
+      linksLine: "About Us | Products | General | Contact Us",
+      addressLine:
+        "44/1, Moo 7, Poochaosamingprai Rd. Prapradang, Samuthprakarn",
+      contactLine:
+        "Tel: 02-755-8061-2 | Fax: 02-755-8063 | Email: info@neosen.com",
+      copyrightLine: "© copyright 2005 Neosen",
     },
   },
 };
