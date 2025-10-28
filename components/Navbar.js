@@ -120,19 +120,6 @@ export default function Navbar() {
                 </div>
               ) : null}
             </Link>
-            {strapline ? (
-              <div className="basis-full text-center text-[9px] leading-4 text-white/80 sm:hidden">
-                <p className="flex justify-center gap-1 text-white">
-                  {highlightLetter ? (
-                    <span className="font-semibold text-amber-200">{highlightLetter}</span>
-                  ) : null}
-                  <span className="uppercase tracking-[0.35em]">{straplineRest}</span>
-                </p>
-                {legacyHeader.emphasis ? (
-                  <p className="mt-1 uppercase tracking-[0.35em] text-amber-200">{legacyHeader.emphasis}</p>
-                ) : null}
-              </div>
-            ) : null}
             <button
               type="button"
               onClick={() => setIsMenuOpen((value) => !value)}
