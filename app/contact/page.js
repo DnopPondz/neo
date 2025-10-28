@@ -1,9 +1,9 @@
 import ContactView from "./ContactView";
 
 export const metadata = {
-  title: "ติดต่อเรา | Contact | ThaiPaipan Textile Printing",
+  title: "Contact Neosen",
   description:
-    "พูดคุยกับทีมผู้เชี่ยวชาญเพื่อเริ่มต้นโปรเจกต์ พร้อมข้อมูลภาษาอังกฤษสำหรับพันธมิตรต่างประเทศ",
+    "Connect with Neosen specialists to plan intelligent charging, energy storage, and fleet solutions across your network.",
 };
 
 export default function ContactPage() {

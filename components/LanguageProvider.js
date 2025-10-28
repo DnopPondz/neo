@@ -7,279 +7,385 @@ const LanguageContext = createContext(undefined);
 const translations = {
   th: {
     brand: {
-      name: "THAIPAIPAN",
-      tagline: "บริษัทไทยพีพาน การพิมพ์ผ้า",
-      slogan: "ผู้เชี่ยวชาญด้านการพิมพ์ผ้าคุณภาพสูงของประเทศไทย",
+      name: "NEOSEN",
+      tagline: "โซลูชันพลังงานอัจฉริยะ",
+      slogan: "ยกระดับระบบชาร์จและบริหารพลังงานสำหรับโลกการขนส่งไฟฟ้า",
+    },
+    legacyHeader: {
+      strapline: "High information technologies for high success in your business.",
+      emphasis: "THINK OF US",
+      company: '"NEOSEN LIMITED"',
     },
     nav: {
       home: "หน้าแรก",
-      about: "แนะนำ",
-      capabilities: "ความสามารถ",
-      products: "สินค้า",
-      news: "บทความ",
+      capabilities: "เทคโนโลยี",
+      products: "โซลูชัน",
       contact: "ติดต่อ",
     },
+    home: {
+      banner: {
+        heading: "ABOUTUS",
+        description:
+          "นีโซเอนมุ่งมั่นพัฒนาเทคโนโลยีและบริการเพื่อยกระดับระบบไฟฟ้าอัจฉริยะสำหรับธุรกิจไทย",
+      },
+      paragraphs: [
+        "นีโซเอน เป็นบริษัทที่ผลิตและจัดจำหน่ายส่วนประกอบของอิเล็กทรอนิกส์ ที่ก่อตั้งขึ้นเมื่อมากกว่า 15 ปีที่ผ่านมา ทีมของเราและเครื่องมือที่ล้ำสมัยช่วยให้เราออกแบบและพัฒนาทุกรายละเอียดการประยุกต์ใช้งานเฉพาะผลิตภัณฑ์ ตั้งแต่ฟังก์ชันพื้นฐานไปจนถึงระบบควบคุมการบูรณาการอุตสาหกรรมที่สมบูรณ์แบบ เราเข้าใจในความต้องการของลูกค้าเป็นอย่างดี เนื่องจากเรามีประสบการณ์และความเป็นมืออาชีพที่สำคัญทั้งในด้านพัฒนาสินค้าร่วมกับลูกค้า และการบริการหลังการขาย",
+        "นีโซเอนมีความมุ่งมั่นที่จะพัฒนาโซลูชันที่สอดคล้องกับการใช้งานทางไฟฟ้าตามความต้องการ หากคุณต้องการทราบรายละเอียดเพิ่มเติม เรายินดีอย่างยิ่งที่จะให้คำปรึกษาที่เหมาะกับคุณ พร้อมรับฟังทุกความต้องการของคุณได้ที่ www.neosen.com หรือ info@neosen.com และหากต้องการปรึกษาเพิ่มเติม สามารถติดต่อเราได้ที่ 0-2831-5300-4",
+      ],
+      contact: {
+        invite:
+          "พร้อมสนทนาเพื่อออกแบบระบบอิเล็กทรอนิกส์ที่ตอบโจทย์ธุรกิจของคุณ",
+        websiteLabel: "เว็บไซต์",
+        website: "www.neosen.com",
+        emailLabel: "อีเมล",
+        email: "info@neosen.com",
+        phoneLabel: "โทรศัพท์",
+        phone: "0-2831-5300-4",
+      },
+    },
     hero: {
-      headline: "บริการพิมพ์ผ้าแบบครบวงจร",
-      subtitle:
-        "เราผลิตงานพิมพ์ผ้าให้กับอุตสาหกรรมสิ่งทอทั่วประเทศด้วยเทคโนโลยีที่แม่นยำและมาตรฐานระดับสากล",
-      primaryCta: "ปรึกษาผู้เชี่ยวชาญ",
-      secondaryCta: "ดาวน์โหลดแคตตาล็อก",
+      eyebrow: "แพลตฟอร์มพลังงานอัจฉริยะ",
+      headline: "ออกแบบระบบพลังงานเพื่อการเดินทางยุคถัดไป",
+      description:
+        "Neosen พัฒนาฮาร์ดแวร์และซอฟต์แวร์แบบครบวงจรสำหรับสถานีชาร์จ รถไฟฟ้า และโครงสร้างพื้นฐานพลังงานที่ต้องการความเสถียรสูง",
+      primaryCta: "ดูโซลูชันทั้งหมด",
+      secondaryCta: "ดาวน์โหลดสเปก",
+      stats: [
+        { label: "สถานีชาร์จที่ติดตั้ง", value: "150K+" },
+        { label: "ประเทศที่ให้บริการ", value: "42" },
+        { label: "ความพร้อมใช้งาน", value: "99.97%" },
+      ],
       highlights: [
-        "โรงงานพิมพ์ผ้าแบบโรตารี่และดิจิทัล",
-        "ทีมงานมืออาชีพมากกว่า 30 ปี",
-        "ควบคุมคุณภาพทุกขั้นตอน",
+        "บริหารจัดการแบบเรียลไทม์ด้วยคลาวด์",
+        "รองรับมาตรฐานความปลอดภัยระดับสากล",
+        "บริการเฝ้าระวังและบำรุงรักษาตลอด 24 ชม.",
       ],
     },
     sections: {
-      about: {
-        title: "ทำไมต้องไทยพีพาน",
+      partners: {
+        title: "ผู้ร่วมสร้างระบบพลังงานแห่งอนาคต",
         description:
-          "เราคัดสรรวัตถุดิบและสีพิมพ์ที่ดีที่สุด เพื่อให้ผืนผ้าของคุณโดดเด่น สวยงาม และทนทานในทุกการใช้งาน",
-        pillars: [
-          {
-            title: "นวัตกรรม",
-            detail: "เครื่องจักรรุ่นใหม่ รองรับงานที่ซับซ้อนและหลากหลาย",
-          },
-          {
-            title: "บริการ",
-            detail: "ดูแลทุกขั้นตอนตั้งแต่ต้นแบบจนถึงจัดส่ง",
-          },
-          {
-            title: "ความเชื่อมั่น",
-            detail: "ได้รับความไว้วางใจจากแบรนด์ชั้นนำในอุตสาหกรรมสิ่งทอ",
-          },
-        ],
+          "องค์กรด้านพลังงาน การขนส่ง และค้าปลีกระดับโลกไว้วางใจโซลูชันของ Neosen ในการขยายเครือข่ายชาร์จและระบบจัดเก็บพลังงาน",
+        logos: ["GridWorks", "MoveX", "Voltchain", "Aerolink", "UrbanFuel"],
       },
-      products: {
-        title: "โซลูชันการพิมพ์สำหรับทุกอุตสาหกรรม",
+      solutions: {
+        title: "โซลูชันที่ปรับให้เหมาะกับการใช้งาน",
         description:
-          "รองรับงานสิ่งทอหลากหลายประเภท ตั้งแต่เสื้อผ้าแฟชั่น ผ้าตกแต่งบ้าน ไปจนถึงผ้าอุตสาหกรรม",
-        categories: [
-          {
-            title: "แฟชั่น",
-            detail: "ลายพิมพ์เฉพาะตัวสำหรับเสื้อผ้าและเครื่องแต่งกาย",
-          },
-          {
-            title: "ของตกแต่งบ้าน",
-            detail: "ผ้าม่าน ผ้าปูโต๊ะ และของตกแต่งที่ต้องการความปราณีต",
-          },
-          {
-            title: "งานอุตสาหกรรม",
-            detail: "ผ้าที่เน้นความทนทานและคุณสมบัติพิเศษ",
-          },
-        ],
-      },
-      capabilities: {
-        title: "ศักยภาพของเรา",
+          "ทุกแพ็กเกจประกอบด้วยฮาร์ดแวร์ที่ผ่านการรับรอง การจัดการพลังงานด้วย AI และบริการหลังการขายแบบครบวงจร",
         items: [
           {
-            title: "การพิมพ์โรตารี่",
-            detail: "เหมาะสำหรับการผลิตจำนวนมากด้วยความเร็วสูง",
+            title: "สถานีชาร์จยานยนต์ไฟฟ้า",
+            detail:
+              "โมดูลาร์ DC fast charge พร้อมระบบ load balancing และการคิดค่าบริการแบบยืดหยุ่น",
           },
           {
-            title: "การพิมพ์ดิจิทัล",
-            detail: "รายละเอียดคมชัด รองรับงานต้นแบบและงานพิเศษ",
+            title: "คลังพลังงานสำหรับอุตสาหกรรม",
+            detail:
+              "ระบบกักเก็บพลังงานระดับเมกะวัตต์ ปรับสมดุลการใช้ไฟ ลดพีก และรองรับพลังงานหมุนเวียน",
           },
           {
-            title: "การฟินิชชิ่งครบวงจร",
-            detail: "บริการตกแต่งผ้าหลังการพิมพ์ตามความต้องการ",
+            title: "แพลตฟอร์มจัดการฟลีท",
+            detail:
+              "แดชบอร์ดเดียวเห็นทุกสถานะรถและสถานี พร้อมการวิเคราะห์การใช้พลังงานเพื่อวางแผนปฏิบัติการ",
+          },
+        ],
+        footnote: "ทุกโครงการเริ่มจากการออกแบบร่วมกับทีมวิศวกรผู้เชี่ยวชาญของ Neosen",
+      },
+      products: {
+        title: "แพ็กเกจที่เลือกได้ตามเป้าหมาย",
+        description:
+          "เลือก FastCharge Core, GridFlex Storage, Fleet Orchestrator หรือ Site Intelligence เพื่อสร้างระบบพลังงานที่เหมาะกับคุณ",
+        ctaHeadline: "พร้อมยกระดับโครงสร้างพลังงานของคุณหรือยัง?",
+      },
+      platform: {
+        title: "สถาปัตยกรรมแพลตฟอร์มที่ยืดหยุ่น",
+        description:
+          "ผสานฮาร์ดแวร์ที่ทนทาน ซอฟต์แวร์ที่อัปเดตตลอดเวลา และบริการดูแลเชิงรุกเพื่อความพร้อมใช้งานสูงสุด",
+        pillars: [
+          {
+            title: "ฮาร์ดแวร์พร้อมใช้งาน",
+            summary: "มาตรฐาน IP65, รองรับ Plug & Charge, ปรับกำลังอัตโนมัติ",
+            points: [
+              "รองรับหัวชาร์จ CCS, CHAdeMO และ GB/T",
+              "โครงสร้างอะลูมิเนียมกันการกัดกร่อน",
+              "อัปเดตเฟิร์มแวร์ผ่านเครือข่ายได้ทันที",
+            ],
+          },
+          {
+            title: "ซอฟต์แวร์อัจฉริยะ",
+            summary: "ระบบวิเคราะห์ข้อมูลพลังงานและคาดการณ์ล่วงหน้า",
+            points: [
+              "แดชบอร์ดแบบเรียลไทม์",
+              "API เปิดสำหรับเชื่อมต่อระบบอื่น",
+              "ระบบแจ้งเตือนและสั่งงานจากระยะไกล",
+            ],
+          },
+          {
+            title: "การดูแลระดับมืออาชีพ",
+            summary: "ทีมงาน 24/7 พร้อมสปาร์พาร์ตทั่วภูมิภาค",
+            points: [
+              "ศูนย์บริการเชิงรุกใน 12 ประเทศ",
+              "SLA เข้มงวดไม่เกิน 4 ชั่วโมง",
+              "ฝึกอบรมและถ่ายทอดเทคโนโลยีให้ทีมลูกค้า",
+            ],
           },
         ],
       },
-      news: {
-        title: "อัปเดตล่าสุด",
-        articles: [
+      industries: {
+        title: "ตอบโจทย์หลายอุตสาหกรรม",
+        description:
+          "ตั้งแต่เครือข่ายขนส่งสาธารณะไปจนถึงโลจิสติกส์ระยะไกล เราปรับโครงสร้างระบบให้เหมาะกับสภาพแวดล้อมของคุณ",
+        sectors: [
           {
-            title: "เปิดไลน์การผลิตดิจิทัลรุ่นใหม่",
-            summary:
-              "เพิ่มศักยภาพในการพิมพ์ลายความละเอียดสูง พร้อมสีที่สดและใช้หมึกเป็นมิตรต่อสิ่งแวดล้อม",
+            title: "การขนส่งสาธารณะ",
+            blurb: "ชาร์จรถเมล์ไฟฟ้าด้วยระบบวางแผนรอบการเดินรถ",
           },
           {
-            title: "เวิร์กช็อปออกแบบลายผ้า",
+            title: "สถานีบริการน้ำมัน",
+            blurb: "เพิ่มโซนชาร์จเร็วพร้อมระบบสมาชิก",
+          },
+          {
+            title: "คลังสินค้าและโลจิสติกส์",
+            blurb: "จัดการฟลีทยานยนต์ไฟฟ้าและ AGV ด้วยข้อมูลรวม",
+          },
+          {
+            title: "สนามบินและท่าเรือ",
+            blurb: "แหล่งพลังงานสำรองและระบบจ่ายไฟสำหรับยานพาหนะภาคพื้น",
+          },
+        ],
+      },
+      resources: {
+        title: "อินไซต์ล่าสุด",
+        description:
+          "ติดตามแนวโน้ม EV และพลังงานสะอาด พร้อมกรณีศึกษาโครงการจริงจากลูกค้า Neosen",
+        articles: [
+          {
+            category: "กรณีศึกษา",
+            title: "เครือข่ายชาร์จ 1,200 จุดใน 6 เดือน",
             summary:
-              "เชิญนักออกแบบร่วมเรียนรู้เทคนิคการเตรียมไฟล์และเลือกวัสดุที่เหมาะสม",
+              "วิธีที่ผู้ให้บริการรถสาธารณะเปลี่ยนเป็นระบบไฟฟ้าด้วยการวางแผนโครงสร้างแบบโมดูลาร์",
+          },
+          {
+            category: "บทวิเคราะห์",
+            title: "สูตรการลดค่าไฟด้วยระบบกักเก็บพลังงาน",
+            summary:
+              "เจาะลึกเทคนิค peak shaving และการใช้ AI ทำนายโหลด",
           },
         ],
       },
       contact: {
-        title: "เริ่มต้นโปรเจกต์กับเรา",
+        title: "ช่องทางติดต่อ NEOSEN",
         description:
-          "ติดต่อทีมงานเพื่อรับคำปรึกษาและใบเสนอราคา เราพร้อมตอบกลับภายใน 1 วันทำการ",
+          "ส่งอีเมล โทรศัพท์ หรือกรอกแบบฟอร์มเพื่อให้ทีมงานติดต่อกลับเกี่ยวกับผลิตภัณฑ์และบริการของเรา",
         phoneLabel: "โทร",
         emailLabel: "อีเมล",
+        addressLabel: "สำนักงานใหญ่",
       },
     },
     footer: {
-      tagline:
-        "เราพัฒนาความเชี่ยวชาญการพิมพ์ผ้าเพื่อยกระดับผลิตภัณฑ์ของลูกค้า พร้อมสนับสนุนธุรกิจไทยให้เติบโตอย่างยั่งยืน",
-      quickLinksTitle: "เมนูลัด",
-      contactTitle: "ติดต่อโรงงาน",
-      addressLines: [
-        "บริษัท ไทยพีพาน เท็กซ์ไทล์ พริ้นติ้ง จำกัด",
-        "70 หมู่ 5 ถนนสุวินทวงศ์",
-        "แขวงโคกแฝด เขตหนองจอก กรุงเทพมหานคร 10530",
+      linkGroupLabel: "ลิงก์ส่วนท้ายเว็บไซต์",
+      links: [
+        { label: "เกี่ยวกับเรา", href: "/" },
+        { label: "ผลิตภัณฑ์", href: "/capabilities" },
+        { label: "บริการทั่วไป", href: "/products" },
+        { label: "ติดต่อเรา", href: "/contact" },
       ],
-      contactNumbers: [
-        "โทร. +66(0)2735-9109-10",
-        "โทร. +66(0)2182-3306",
-        "โทร. +66(0)2182-3301",
-        "แฟกซ์ +66(0)2735-8941",
-      ],
-      emailLabel: "อีเมล",
-      email: "sales@thaipaipan.co.th",
-      hoursTitle: "เวลาทำการ",
-      hours: [
-        "จันทร์-เสาร์ 08:30-17:30 น.",
-        "หยุดวันอาทิตย์และวันหยุดนักขัตฤกษ์",
-      ],
-      socialsTitle: "ติดตามเรา",
-      socials: [
-        { label: "Facebook", href: "https://www.facebook.com/Thaipaipan" },
-        { label: "LINE", href: "https://line.me/R/ti/p/@thaipaipan" },
-        { label: "Instagram", href: "https://www.instagram.com/thaipaipan" },
-      ],
-      legal: "© {year} ThaiPaipan Textile Printing Co., Ltd. สงวนลิขสิทธิ์",
-      certifications: "มาตรฐาน ISO 9001 และการใช้หมึกพิมพ์ที่เป็นมิตรต่อสิ่งแวดล้อม",
+      addressLine:
+        "44/1 หมู่ 7 ถนนปู่เจ้าสมิงพราย อำเภอพระประแดง จังหวัดสมุทรปราการ",
+      contactLine:
+        "โทร. 02-755-8061-2 | แฟกซ์ 02-755-8063 | อีเมล info@neosen.com",
+      copyrightLine: "© copyright 2005 Neosen",
     },
   },
   en: {
     brand: {
-      name: "THAIPAIPAN",
-      tagline: "Thai Textile Printing Company",
-      slogan: "Thailand's trusted experts in premium textile printing",
+      name: "NEOSEN",
+      tagline: "Intelligent Power Systems",
+      slogan: "Powering mobility and infrastructure with adaptive charging technology.",
+    },
+    legacyHeader: {
+      strapline: "High information technologies for high success in your business.",
+      emphasis: "THINK OF US",
+      company: '"NEOSEN LIMITED"',
     },
     nav: {
       home: "Home",
-      about: "About",
-      capabilities: "Capabilities",
-      products: "Products",
-      news: "News",
+      capabilities: "Technology",
+      products: "Solutions",
       contact: "Contact",
     },
+    home: {
+      banner: {
+        heading: "ABOUTUS",
+        description:
+          "Neosen is committed to advancing smart electrical systems for businesses across Thailand and beyond.",
+      },
+      paragraphs: [
+        "Neosen has manufactured and distributed electronic components for more than 15 years. Our experienced team and advanced tools let us design and refine every detail of tailored applications—from essential functions to fully integrated industrial control systems. We understand customer requirements through deep experience and professionalism across co-development and after-sales support.",
+        "We are dedicated to delivering electrical solutions that fit your operational needs. For more information, we are ready to advise on the right approach at www.neosen.com or info@neosen.com. If you would like to consult with our specialists directly, please call 0-2831-5300-4.",
+      ],
+      contact: {
+        invite: "Let's design the right electronic system for your business together.",
+        websiteLabel: "Website",
+        website: "www.neosen.com",
+        emailLabel: "Email",
+        email: "info@neosen.com",
+        phoneLabel: "Phone",
+        phone: "0-2831-5300-4",
+      },
+    },
     hero: {
-      headline: "Complete Textile Printing Solutions",
-      subtitle:
-        "We produce precision printed fabrics for industries across Thailand with international quality standards.",
-      primaryCta: "Talk to a specialist",
-      secondaryCta: "Download catalogue",
+      eyebrow: "Intelligent power platform",
+      headline: "Power systems engineered for tomorrow's mobility",
+      description:
+        "Neosen unifies certified hardware, adaptive software, and proactive services to deliver resilient charging and energy networks worldwide.",
+      primaryCta: "Explore solutions",
+      secondaryCta: "Download spec sheet",
+      stats: [
+        { label: "Chargers deployed", value: "150K+" },
+        { label: "Countries served", value: "42" },
+        { label: "System uptime", value: "99.97%" },
+      ],
       highlights: [
-        "Rotary and digital printing facilities",
-        "More than 30 years of craft expertise",
-        "Quality assurance at every stage",
+        "Unified hardware and cloud management",
+        "24/7 monitoring with predictive maintenance",
+        "Certified to global safety and security standards",
       ],
     },
     sections: {
-      about: {
-        title: "Why choose ThaiPaipan",
+      partners: {
+        title: "Trusted by energy innovators",
         description:
-          "We select the finest fabrics and colorants so that your textiles stand out with beauty, durability, and vibrant detail.",
-        pillars: [
-          {
-            title: "Innovation",
-            detail: "Modern machinery ready for intricate, high-volume work.",
-          },
-          {
-            title: "Service",
-            detail: "Guidance from prototyping to final delivery.",
-          },
-          {
-            title: "Trust",
-            detail: "Preferred partner of leading textile brands.",
-          },
-        ],
+          "Utilities, transit agencies, and retail networks rely on Neosen to scale fast-charging and energy storage infrastructure.",
+        logos: ["GridWorks", "MoveX", "Voltchain", "Aerolink", "UrbanFuel"],
       },
-      products: {
-        title: "Printing solutions for every industry",
+      solutions: {
+        title: "Solutions tailored to your operation",
         description:
-          "Supporting fashion, home décor, and industrial textiles with tailored finishing options.",
-        categories: [
-          {
-            title: "Fashion",
-            detail: "Signature prints for apparel and accessories.",
-          },
-          {
-            title: "Home décor",
-            detail: "Curtains, table linens, and accents that demand precision.",
-          },
-          {
-            title: "Industrial",
-            detail: "Technical textiles engineered for performance.",
-          },
-        ],
-      },
-      capabilities: {
-        title: "Our capabilities",
+          "Every deployment includes certified hardware, AI-powered energy management, and lifecycle services designed around your teams.",
         items: [
           {
-            title: "Rotary printing",
-            detail: "High-speed production perfect for large orders.",
+            title: "EV charging hubs",
+            detail:
+              "Modular DC fast charging with dynamic load balancing, smart billing, and user-first experiences.",
           },
           {
-            title: "Digital printing",
-            detail: "Sharp detail ideal for samples and specialty runs.",
+            title: "Industrial energy storage",
+            detail:
+              "Megawatt-scale storage that stabilises demand, integrates renewables, and protects against outages.",
           },
           {
-            title: "Complete finishing",
-            detail: "Post-print services tailored to your specifications.",
+            title: "Fleet intelligence platform",
+            detail:
+              "Single-pane visibility of vehicles and chargers with predictive analytics for operations planning.",
+          },
+        ],
+        footnote: "Co-create every project alongside Neosen solution architects.",
+      },
+      products: {
+        title: "Packages aligned to your goals",
+        description:
+          "Choose FastCharge Core, GridFlex Storage, Fleet Orchestrator, or Site Intelligence to build the right energy system for you.",
+        ctaHeadline: "Ready to elevate your energy infrastructure?",
+      },
+      platform: {
+        title: "A flexible architecture from edge to cloud",
+        description:
+          "Resilient hardware, continuously updated software, and proactive support combine to deliver always-on performance.",
+        pillars: [
+          {
+            title: "Deployment-ready hardware",
+            summary: "IP65-rated enclosures, plug-and-charge ready, adaptive power modules.",
+            points: [
+              "Supports CCS, CHAdeMO, and GB/T connectors",
+              "Corrosion-resistant aluminium chassis",
+              "Instant over-the-air firmware updates",
+            ],
+          },
+          {
+            title: "Intelligent software",
+            summary: "Energy analytics with predictive controls and open APIs.",
+            points: [
+              "Real-time operational dashboards",
+              "Open APIs for ERP and billing integrations",
+              "Remote commands and automated alerts",
+            ],
+          },
+          {
+            title: "Expert lifecycle services",
+            summary: "24/7 field teams with regional parts hubs and training programmes.",
+            points: [
+              "Proactive service centres across 12 countries",
+              "Guaranteed SLAs within four hours",
+              "On-site enablement for your technicians",
+            ],
           },
         ],
       },
-      news: {
-        title: "Latest updates",
-        articles: [
+      industries: {
+        title: "Built for multiple industries",
+        description:
+          "From public transit to long-haul logistics, configure Neosen systems to fit your environment and regulatory needs.",
+        sectors: [
           {
-            title: "New digital line launched",
-            summary:
-              "Enhanced capacity for vivid, eco-friendly prints with ultra-fine detail.",
+            title: "Public transit",
+            blurb: "Optimise bus charging around route schedules and depot constraints.",
           },
           {
-            title: "Textile design workshop",
+            title: "Fuel & retail",
+            blurb: "Add fast-charging experiences with loyalty integrations and analytics.",
+          },
+          {
+            title: "Warehousing & logistics",
+            blurb: "Manage EV fleets and automated guided vehicles from a unified dashboard.",
+          },
+          {
+            title: "Airports & ports",
+            blurb: "Deploy resilient backup power and ground-support charging infrastructure.",
+          },
+        ],
+      },
+      resources: {
+        title: "Latest insights",
+        description:
+          "Stay ahead of EV and clean-energy trends with reports, guides, and real-world success stories.",
+        articles: [
+          {
+            category: "Case study",
+            title: "1,200 charging points launched in six months",
             summary:
-              "Join designers to learn file preparation and material selection best practices.",
+              "Discover how a transit authority electrified its network with modular rollouts and adaptive load management.",
+          },
+          {
+            category: "Analysis",
+            title: "The energy-storage playbook for cost reduction",
+            summary:
+              "Peak shaving strategies and AI load forecasting to protect margins and grid stability.",
           },
         ],
       },
       contact: {
-        title: "Kick-start your next project",
+        title: "Contact NEOSEN",
         description:
-          "Reach out for consultation and a quotation. We respond within one business day.",
-        phoneLabel: "Tel",
+          "Email, call, or leave us a message and we'll share the right products and services for your needs.",
+        phoneLabel: "Phone",
         emailLabel: "Email",
+        addressLabel: "Headquarters",
       },
     },
     footer: {
-      tagline:
-        "We combine craftsmanship and modern technology to elevate your textiles with consistent colour and reliable turnaround times.",
-      quickLinksTitle: "Quick links",
-      contactTitle: "Contact the mill",
-      addressLines: [
-        "ThaiPaipan Textile Printing Co., Ltd.",
-        "70 Moo 5, Suwinthawong Road",
-        "Khok Faet, Nong Chok, Bangkok 10530",
-        "Thailand",
+      linkGroupLabel: "Footer navigation links",
+      links: [
+        { label: "About Us", href: "/" },
+        { label: "Products", href: "/capabilities" },
+        { label: "General", href: "/products" },
+        { label: "Contact Us", href: "/contact" },
       ],
-      contactNumbers: [
-        "Tel +66(0)2735-9109-10",
-        "Tel +66(0)2182-3306",
-        "Tel +66(0)2182-3301",
-        "Fax +66(0)2735-8941",
-      ],
-      emailLabel: "Email",
-      email: "sales@thaipaipan.co.th",
-      hoursTitle: "Operating hours",
-      hours: [
-        "Monday – Saturday 08:30-17:30",
-        "Closed on Sundays and public holidays",
-      ],
-      socialsTitle: "Connect with us",
-      socials: [
-        { label: "Facebook", href: "https://www.facebook.com/Thaipaipan" },
-        { label: "LINE", href: "https://line.me/R/ti/p/@thaipaipan" },
-        { label: "Instagram", href: "https://www.instagram.com/thaipaipan" },
-      ],
-      legal: "© {year} ThaiPaipan Textile Printing Co., Ltd. All rights reserved.",
-      certifications: "ISO 9001 certified · Eco-conscious dye systems",
+      addressLine:
+        "44/1, Moo 7, Poochaosamingprai Rd. Prapradang, Samuthprakarn",
+      contactLine:
+        "Tel: 02-755-8061-2 | Fax: 02-755-8063 | Email: info@neosen.com",
+      copyrightLine: "© copyright 2005 Neosen",
     },
   },
 };

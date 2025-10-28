@@ -1,9 +1,9 @@
 import ProductsView from "./ProductsView";
 
 export const metadata = {
-  title: "โซลูชันสินค้า | Product Solutions | ThaiPaipan Textile Printing",
+  title: "Neosen Solutions Overview",
   description:
-    "ค้นพบแพ็กเกจการพิมพ์ผ้า ฟินิชชิ่ง และบริการเสริมสำหรับแฟชั่น ของตกแต่งบ้าน และงานอุตสาหกรรม พร้อมรายละเอียดภาษาอังกฤษ",
+    "Explore the Neosen philosophy toward information technology and the commitment to providing tailored hardware and consulting.",
 };
 
 export default function ProductsPage() {

@@ -5,92 +5,138 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 const pageCopy = {
   th: {
-    heroHeading: "มาพูดคุยกับทีมของเรา",
-    contactSectionTitle: "ช่องทางการติดต่อหลัก",
-    contactChannels: [
-      {
-        label: "ฝ่ายขาย",
-        phones: ["+66 (0)2735 9109-10", "+66 (0)2182 3306"],
-        email: "sales@thaipaipan.com",
-      },
-      {
-        label: "บริการหลังการขาย",
-        phones: ["+66 (0)2182 3301"],
-        email: "service@thaipaipan.com",
-      },
+    heroHeading: "ติดต่อเรา",
+    intro:
+      "ส่งข้อความถึงทีม Neosen หรือใช้ช่องทางการติดต่อด้านล่างเพื่อพูดคุยกับเราได้ทันที",
+    contactEmail: "info@neosen.com",
+    contactAddress: [
+      "44/1 หมู่ 7 ถนนภูชสมิงไพร",
+      "ตำบลบางจาก อำเภอพระประแดง",
+      "จังหวัดสมุทรปราการ 10130",
     ],
-    projectPrepTitle: "เตรียมข้อมูลโปรเจกต์",
-    projectPrepDescription:
-      "แจ้งประเภทผ้า ปริมาณโดยประมาณ กำหนดส่ง และบริการฟินิชชิ่งที่ต้องการ เพื่อให้ทีมสามารถจัดทำใบเสนอราคาได้รวดเร็ว",
-    visitInfo: [
-      {
-        title: "เวลาทำการ",
-        detail: "จันทร์-เสาร์ 08:30-17:30 น. ปิดวันอาทิตย์และวันหยุดนักขัตฤกษ์",
-      },
-      {
-        title: "ที่ตั้ง",
-        detail: "41/3 หมู่ 2 ถนนสุขาภิบาล 1 แขวงคลองจั่น เขตบางกะปิ กรุงเทพมหานคร 10240",
-      },
-      {
-        title: "ช่องทางออนไลน์",
-        detail: "Line Official: @thaipaipan | Facebook: ThaiPaipan Textile Printing",
-      },
-    ],
-    mapCta: "เปิดแผนที่ Google Maps",
-    resourcesTitle: "เตรียมพร้อมก่อนเริ่มงานพิมพ์",
-    resourcesDescription:
-      "ดาวน์โหลดเทมเพลตเช็กลิสต์และตัวอย่างไฟล์เพื่อให้ทีมออกแบบและจัดซื้อของคุณทำงานได้คล่องตัว",
-    resourcesLink: "อ่านคู่มือการส่งมอบไฟล์",
-    formTitle: "ขอรับเทมเพลตและตัวอย่างไฟล์",
+    contactPhones: ["02-7559961-2", "02-7559963"],
+    formTitle: "กรอกข้อมูลเพื่อติดต่อทีมของเรา",
     formDescription:
-      "ฝากอีเมลไว้กับเราเพื่อรับเทมเพลตล่าสุด รวมถึงข้อมูลการเตรียมไฟล์สำหรับแต่ละเทคนิคการพิมพ์",
-    emailLabel: "อีเมลติดต่อกลับ",
-    emailPlaceholder: "name@company.com",
-    submitLabel: "ขอรับข้อมูล",
+      "เราจะติดต่อกลับพร้อมข้อมูลผลิตภัณฑ์และบริการที่เหมาะสมกับความต้องการของคุณ",
+    formFields: [
+      {
+        name: "name",
+        label: "กรุณาใส่ชื่อของท่าน",
+        placeholder: "ชื่อ-นามสกุล",
+        type: "text",
+      },
+      {
+        name: "email",
+        label: "อีเมล",
+        placeholder: "you@example.com",
+        type: "email",
+      },
+      {
+        name: "subject",
+        label: "หัวข้อข้อความ",
+        placeholder: "หัวข้อที่ต้องการติดต่อ",
+        type: "text",
+      },
+      {
+        name: "message",
+        label: "ข้อความของท่าน",
+        placeholder: "พิมพ์ข้อความถึงทีม Neosen",
+        type: "textarea",
+      },
+    ],
+    submitLabel: "ส่ง",
+    linkSectionTitle: "ลิงก์อ้างอิง",
+    linkGroups: [
+      {
+        title: "Company Links",
+        description:
+          "สำหรับข้อมูลเกี่ยวกับบริษัทคู่ค้าจากหลากหลายอุตสาหกรรมที่เราร่วมงานด้วย",
+        links: [
+          {
+            label: "www.techchrome.com",
+            href: "http://www.techchrome.com",
+          },
+        ],
+      },
+      {
+        title: "Technical Links",
+        description:
+          "สำหรับข้อมูลทางเทคนิคเพิ่มเติมจากเว็บไซต์ที่เราแนะนำ",
+        links: [
+          {
+            label: "www.neosen.com",
+            href: "http://www.neosen.com",
+          },
+        ],
+      },
+    ],
   },
   en: {
-    heroHeading: "Connect with our team",
-    contactSectionTitle: "Primary contact channels",
-    contactChannels: [
-      {
-        label: "Sales team",
-        phones: ["+66 (0)2735 9109-10", "+66 (0)2182 3306"],
-        email: "sales@thaipaipan.com",
-      },
-      {
-        label: "After-sales support",
-        phones: ["+66 (0)2182 3301"],
-        email: "service@thaipaipan.com",
-      },
+    heroHeading: "Contact Us",
+    intro:
+      "Send a message to the Neosen team or reach out directly through the channels below.",
+    contactEmail: "info@neosen.com",
+    contactAddress: [
+      "44/1 Moo 7, Poochasamingprai Rd.",
+      "Prapadang, Samuthprakarn",
+      "10130",
     ],
-    projectPrepTitle: "Prepare your project brief",
-    projectPrepDescription:
-      "Share fabric types, estimated volume, delivery timeline, and finishing needs so we can prepare a tailored quotation quickly.",
-    visitInfo: [
-      {
-        title: "Operating hours",
-        detail: "Monday–Saturday 08:30-17:30. Closed on Sundays and public holidays.",
-      },
-      {
-        title: "Address",
-        detail: "41/3 Moo 2, Sukhaphiban 1 Road, Khlong Chan, Bang Kapi, Bangkok 10240",
-      },
-      {
-        title: "Online channels",
-        detail: "Line Official: @thaipaipan | Facebook: ThaiPaipan Textile Printing",
-      },
-    ],
-    mapCta: "Open in Google Maps",
-    resourcesTitle: "Get ready before production",
-    resourcesDescription:
-      "Download checklists and reference files so your design and procurement teams can work smoothly.",
-    resourcesLink: "Read the hand-off guide",
-    formTitle: "Request templates and sample files",
+    contactPhones: ["02-7559961-2", "02-7559963"],
+    formTitle: "Share your details with our team",
     formDescription:
-      "Leave your email to receive the latest templates and file preparation notes for each printing process.",
-    emailLabel: "Contact email",
-    emailPlaceholder: "name@company.com",
-    submitLabel: "Send me the files",
+      "We will respond with product guidance and services tailored to your needs.",
+    formFields: [
+      {
+        name: "name",
+        label: "Your name",
+        placeholder: "First and last name",
+        type: "text",
+      },
+      {
+        name: "email",
+        label: "Email",
+        placeholder: "you@example.com",
+        type: "email",
+      },
+      {
+        name: "subject",
+        label: "Subject",
+        placeholder: "How can we help?",
+        type: "text",
+      },
+      {
+        name: "message",
+        label: "Message",
+        placeholder: "Write your message for Neosen",
+        type: "textarea",
+      },
+    ],
+    submitLabel: "Send",
+    linkSectionTitle: "Reference links",
+    linkGroups: [
+      {
+        title: "Company Links",
+        description:
+          "For information about the companies and industries we collaborate with.",
+        links: [
+          {
+            label: "www.techchrome.com",
+            href: "http://www.techchrome.com",
+          },
+        ],
+      },
+      {
+        title: "Technical Links",
+        description:
+          "For additional technical knowledge from trusted partners.",
+        links: [
+          {
+            label: "www.neosen.com",
+            href: "http://www.neosen.com",
+          },
+        ],
+      },
+    ],
   },
 };
 
@@ -100,89 +146,131 @@ export default function ContactView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
-      <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#0c1337] via-[#142a5f] to-[#0a1129] py-20 text-slate-100">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" aria-hidden />
+      <div className="absolute left-1/2 top-24 h-96 w-96 -translate-x-1/2 rounded-full bg-emerald-400/10 blur-3xl" aria-hidden />
+      <div className="relative mx-auto max-w-6xl space-y-16 px-6 lg:px-8">
         <header className="space-y-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">{sections.contact.title}</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{copy.heroHeading}</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">{sections.contact.description}</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300">
+            {sections.contact.title}
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{copy.heroHeading}</h1>
+          <p className="mx-auto max-w-3xl text-base leading-8 text-white/80">{copy.intro}</p>
         </header>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white/95 p-12 shadow-xl lg:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-slate-900">{copy.contactSectionTitle}</h2>
-            <div className="grid gap-4 md:grid-cols-2">
-              {copy.contactChannels.map((channel) => (
-                <div key={channel.label} className="rounded-3xl border border-amber-100 bg-amber-50/70 p-6 text-sm text-amber-900">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">{channel.label}</p>
-                  <ul className="mt-3 space-y-2">
-                    {channel.phones.map((phone) => (
-                      <li key={phone}>{phone}</li>
+        <section className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.9fr)]">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-10 shadow-2xl shadow-emerald-500/10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,179,237,0.18),_transparent_65%)]" aria-hidden />
+            <div className="relative space-y-8">
+              <div className="space-y-3">
+                <h2 className="text-xl font-semibold text-white">NEOSEN</h2>
+                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-200">
+                  {sections.contact.addressLabel}
+                </div>
+                <address className="not-italic text-sm leading-6 text-slate-100/90">
+                  {copy.contactAddress.map((line) => (
+                    <div key={line}>{line}</div>
+                  ))}
+                </address>
+              </div>
+
+              <div className="grid gap-5 text-sm leading-6 text-slate-100/90 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-200">
+                    {sections.contact.emailLabel}
+                  </p>
+                  <Link
+                    href={`mailto:${copy.contactEmail}`}
+                    className="inline-flex items-center gap-2 text-base font-semibold text-emerald-200 transition hover:text-emerald-100"
+                  >
+                    {copy.contactEmail}
+                    <span aria-hidden>↗</span>
+                  </Link>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-200">
+                    {sections.contact.phoneLabel}
+                  </p>
+                  <ul className="space-y-1">
+                    {copy.contactPhones.map((phone) => (
+                      <li key={phone}>
+                        <Link
+                          href={`tel:${phone.replace(/[^+\d]/g, "")}`}
+                          className="text-base font-semibold text-white/90 transition hover:text-emerald-100"
+                        >
+                          {phone}
+                        </Link>
+                      </li>
                     ))}
                   </ul>
-                  <p className="mt-3 font-medium">{channel.email}</p>
                 </div>
-              ))}
-            </div>
-            <div className="rounded-3xl border border-dashed border-amber-300 p-6 text-sm text-slate-600">
-              <p className="font-semibold text-amber-700">{copy.projectPrepTitle}</p>
-              <p className="mt-2">{copy.projectPrepDescription}</p>
+              </div>
             </div>
           </div>
-          <div className="space-y-5 rounded-3xl border border-slate-200 bg-slate-50/80 p-8 text-sm text-slate-700">
-            <h2 className="text-lg font-semibold text-slate-900">ข้อมูลการเยี่ยมชมโรงงาน</h2>
-            <ul className="space-y-4">
-              {copy.visitInfo.map((item) => (
-                <li key={item.title} className="space-y-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{item.title}</p>
-                  <p>{item.detail}</p>
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="https://maps.app.goo.gl/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
-            >
-              {copy.mapCta}
-              <span aria-hidden>↗</span>
-            </Link>
+
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-emerald-300/30 bg-slate-950/60 p-10 shadow-xl shadow-emerald-500/10">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.18),_transparent_60%)]" aria-hidden />
+            <div className="relative space-y-6">
+              <h2 className="text-2xl font-semibold text-white">{copy.formTitle}</h2>
+              <p className="text-sm leading-6 text-white/70">{copy.formDescription}</p>
+              <form className="space-y-5">
+                {copy.formFields.map((field) => (
+                  <div key={field.name} className="space-y-2">
+                    <label className="block text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200" htmlFor={`contact-${field.name}`}>
+                      {field.label}
+                    </label>
+                    {field.type === "textarea" ? (
+                      <textarea
+                        id={`contact-${field.name}`}
+                        rows={4}
+                        placeholder={field.placeholder}
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/90 shadow-inner shadow-black/20 outline-none transition focus:border-emerald-300 focus:bg-slate-900/80"
+                      />
+                    ) : (
+                      <input
+                        id={`contact-${field.name}`}
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/90 shadow-inner shadow-black/20 outline-none transition focus:border-emerald-300 focus:bg-slate-900/80"
+                      />
+                    )}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="w-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-emerald-500/40 transition hover:from-emerald-300 hover:via-sky-300 hover:to-emerald-400"
+                >
+                  {copy.submitLabel}
+                </button>
+              </form>
+            </div>
           </div>
         </section>
 
-        <section className="grid gap-6 rounded-[3rem] border border-amber-100 bg-amber-50/60 p-12 shadow-inner lg:grid-cols-2">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-amber-900">{copy.resourcesTitle}</h2>
-            <p className="text-base text-amber-900/80">{copy.resourcesDescription}</p>
-            <Link
-              href="/blog/color-management-workflow"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-amber-700 shadow transition hover:text-amber-900"
-            >
-              {copy.resourcesLink}
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
-          <div className="rounded-3xl border border-white/60 bg-white/90 p-8">
-            <h3 className="text-lg font-semibold text-slate-900">{copy.formTitle}</h3>
-            <p className="mt-3 text-sm text-slate-600">{copy.formDescription}</p>
-            <form className="mt-6 space-y-3">
-              <label className="block text-sm font-medium text-slate-700" htmlFor="contact-email">
-                {copy.emailLabel}
-              </label>
-              <input
-                id="contact-email"
-                type="email"
-                placeholder={copy.emailPlaceholder}
-                className="w-full rounded-full border border-amber-200 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-amber-400"
-              />
-              <button
-                type="button"
-                className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
-              >
-                {copy.submitLabel}
-              </button>
-            </form>
+        <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/10 p-10 shadow-inner shadow-emerald-500/10">
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(15,23,42,0.65),_transparent_45%),_url('/legacy/fasteners-pattern.svg')] bg-cover bg-center opacity-40" aria-hidden />
+          <div className="relative grid gap-8 lg:grid-cols-2">
+            {copy.linkGroups.map((group) => (
+              <div key={group.title} className="space-y-3 text-slate-100">
+                <h3 className="text-lg font-semibold text-white">{group.title}</h3>
+                <p className="text-sm leading-6 text-white/70">{group.description}</p>
+                <ul className="space-y-2 text-sm font-semibold text-emerald-200">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 underline-offset-4 hover:text-emerald-100 hover:underline"
+                      >
+                        {link.label}
+                        <span aria-hidden>↗</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
       </div>
