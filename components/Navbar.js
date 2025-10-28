@@ -141,18 +141,23 @@ export default function Navbar() {
               aria-controls="mobile-menu"
             >
               <span className="sr-only">Toggle navigation</span>
-              {isMenuOpen ? (
-                <span className="relative flex h-8 w-8 items-center justify-center rounded-full border border-white/40 bg-white/10 shadow-inner shadow-black/20">
-                  <span className="absolute h-0.5 w-4 -rotate-45 rounded-full bg-current" />
-                  <span className="absolute h-0.5 w-4 rotate-45 rounded-full bg-current" />
-                </span>
-              ) : (
-                <span className="flex flex-col items-center justify-center gap-1.5">
-                  <span className="h-0.5 w-6 rounded-full bg-current transition-transform" />
-                  <span className="h-0.5 w-6 rounded-full bg-current transition-opacity" />
-                  <span className="h-0.5 w-6 rounded-full bg-current transition-transform" />
-                </span>
-              )}
+              <span className="relative inline-block h-5 w-6">
+                <span
+                  className={`absolute left-0 top-0 h-0.5 w-6 origin-center rounded-full bg-current transition-transform duration-300 ease-in-out transform ${
+                    isMenuOpen ? "translate-y-2 rotate-45" : ""
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-1/2 h-0.5 w-6 -translate-y-1/2 rounded-full bg-current transition-opacity duration-200 ease-in-out ${
+                    isMenuOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 w-6 origin-center rounded-full bg-current transition-transform duration-300 ease-in-out transform ${
+                    isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+                  }`}
+                />
+              </span>
             </button>
           </div>
 
