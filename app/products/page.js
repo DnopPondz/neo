@@ -1,9 +1,9 @@
 import ProductsView from "./ProductsView";
 
 export const metadata = {
-  title: "Neosen Energy Solutions",
+  title: "Neosen Solutions Overview",
   description:
-    "Discover modular charging, storage, fleet, and site-intelligence solutions that accelerate intelligent energy deployments.",
+    "Explore the Neosen philosophy toward information technology and the commitment to providing tailored hardware and consulting.",
 };
 
 export default function ProductsPage() {
